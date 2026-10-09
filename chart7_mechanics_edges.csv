@@ -1,0 +1,1053 @@
+﻿source,target,weight
+Acting,Action Point Allowance System,1
+Acting,Area Control / Area Influence,1
+Acting,Area Movement,1
+Acting,Betting/Wagering,4
+Acting,Card Drafting,7
+Acting,Co-operative Play,9
+Acting,Commodity Speculation,1
+Acting,Deck / Pool Building,1
+Acting,Dice Rolling,10
+Acting,Hand Management,8
+Acting,Line Drawing,6
+Acting,Memory,21
+Acting,Modular Board,1
+Acting,Paper-and-Pencil,12
+Acting,Partnerships,35
+Acting,Pattern Building,2
+Acting,Pattern Recognition,3
+Acting,Player Elimination,4
+Acting,Point to Point Movement,2
+Acting,Press Your Luck,3
+Acting,Role Playing,18
+Acting,Roll / Spin and Move,8
+Acting,Set Collection,4
+Acting,Simulation,1
+Acting,Simultaneous Action Selection,7
+Acting,Singing,15
+Acting,Storytelling,20
+Acting,Tile Placement,1
+Acting,Trading,3
+Acting,Variable Player Powers,7
+Acting,Voting,14
+Acting,Worker Placement,2
+Action / Movement Programming,Action Point Allowance System,10
+Action / Movement Programming,Area Control / Area Influence,19
+Action / Movement Programming,Area Enclosure,3
+Action / Movement Programming,Area Movement,18
+Action / Movement Programming,Auction/Bidding,4
+Action / Movement Programming,Betting/Wagering,3
+Action / Movement Programming,Campaign / Battle Card Driven,1
+Action / Movement Programming,Card Drafting,16
+Action / Movement Programming,Co-operative Play,10
+Action / Movement Programming,Commodity Speculation,1
+Action / Movement Programming,Crayon Rail System,2
+Action / Movement Programming,Deck / Pool Building,4
+Action / Movement Programming,Dice Rolling,31
+Action / Movement Programming,Grid Movement,14
+Action / Movement Programming,Hand Management,34
+Action / Movement Programming,Hex-and-Counter,25
+Action / Movement Programming,Memory,6
+Action / Movement Programming,Modular Board,32
+Action / Movement Programming,Paper-and-Pencil,2
+Action / Movement Programming,Partnerships,9
+Action / Movement Programming,Pattern Building,2
+Action / Movement Programming,Pick-up and Deliver,10
+Action / Movement Programming,Player Elimination,18
+Action / Movement Programming,Point to Point Movement,15
+Action / Movement Programming,Press Your Luck,6
+Action / Movement Programming,Rock-Paper-Scissors,2
+Action / Movement Programming,Role Playing,1
+Action / Movement Programming,Route/Network Building,4
+Action / Movement Programming,Secret Unit Deployment,9
+Action / Movement Programming,Set Collection,19
+Action / Movement Programming,Simulation,19
+Action / Movement Programming,Simultaneous Action Selection,84
+Action / Movement Programming,Stock Holding,1
+Action / Movement Programming,Storytelling,1
+Action / Movement Programming,Take That,8
+Action / Movement Programming,Tile Placement,10
+Action / Movement Programming,Time Track,2
+Action / Movement Programming,Trading,2
+Action / Movement Programming,Variable Phase Order,10
+Action / Movement Programming,Variable Player Powers,37
+Action / Movement Programming,Worker Placement,20
+Action Point Allowance System,Area Control / Area Influence,83
+Action Point Allowance System,Area Enclosure,8
+Action Point Allowance System,Area Movement,84
+Action Point Allowance System,Area-Impulse,6
+Action Point Allowance System,Auction/Bidding,31
+Action Point Allowance System,Betting/Wagering,6
+Action Point Allowance System,Campaign / Battle Card Driven,42
+Action Point Allowance System,Card Drafting,47
+Action Point Allowance System,Chit-Pull System,14
+Action Point Allowance System,Co-operative Play,70
+Action Point Allowance System,Commodity Speculation,9
+Action Point Allowance System,Deck / Pool Building,11
+Action Point Allowance System,Dice Rolling,241
+Action Point Allowance System,Grid Movement,79
+Action Point Allowance System,Hand Management,150
+Action Point Allowance System,Hex-and-Counter,52
+Action Point Allowance System,Line Drawing,2
+Action Point Allowance System,Memory,14
+Action Point Allowance System,Modular Board,136
+Action Point Allowance System,Paper-and-Pencil,3
+Action Point Allowance System,Partnerships,31
+Action Point Allowance System,Pattern Building,3
+Action Point Allowance System,Pattern Recognition,1
+Action Point Allowance System,Pick-up and Deliver,49
+Action Point Allowance System,Player Elimination,9
+Action Point Allowance System,Point to Point Movement,71
+Action Point Allowance System,Press Your Luck,18
+Action Point Allowance System,Rock-Paper-Scissors,1
+Action Point Allowance System,Role Playing,18
+Action Point Allowance System,Roll / Spin and Move,8
+Action Point Allowance System,Route/Network Building,12
+Action Point Allowance System,Secret Unit Deployment,38
+Action Point Allowance System,Set Collection,64
+Action Point Allowance System,Simulation,38
+Action Point Allowance System,Simultaneous Action Selection,21
+Action Point Allowance System,Stock Holding,3
+Action Point Allowance System,Storytelling,4
+Action Point Allowance System,Take That,12
+Action Point Allowance System,Tile Placement,64
+Action Point Allowance System,Time Track,9
+Action Point Allowance System,Trading,25
+Action Point Allowance System,Variable Phase Order,29
+Action Point Allowance System,Variable Player Powers,181
+Action Point Allowance System,Voting,13
+Action Point Allowance System,Worker Placement,29
+Area Control / Area Influence,Area Enclosure,28
+Area Control / Area Influence,Area Movement,167
+Area Control / Area Influence,Area-Impulse,2
+Area Control / Area Influence,Auction/Bidding,100
+Area Control / Area Influence,Betting/Wagering,4
+Area Control / Area Influence,Campaign / Battle Card Driven,47
+Area Control / Area Influence,Card Drafting,107
+Area Control / Area Influence,Chit-Pull System,4
+Area Control / Area Influence,Co-operative Play,9
+Area Control / Area Influence,Commodity Speculation,18
+Area Control / Area Influence,Deck / Pool Building,29
+Area Control / Area Influence,Dice Rolling,196
+Area Control / Area Influence,Grid Movement,43
+Area Control / Area Influence,Hand Management,247
+Area Control / Area Influence,Hex-and-Counter,8
+Area Control / Area Influence,Memory,15
+Area Control / Area Influence,Modular Board,115
+Area Control / Area Influence,Paper-and-Pencil,1
+Area Control / Area Influence,Partnerships,47
+Area Control / Area Influence,Pattern Building,23
+Area Control / Area Influence,Pattern Recognition,2
+Area Control / Area Influence,Pick-up and Deliver,25
+Area Control / Area Influence,Player Elimination,18
+Area Control / Area Influence,Point to Point Movement,47
+Area Control / Area Influence,Press Your Luck,13
+Area Control / Area Influence,Rock-Paper-Scissors,5
+Area Control / Area Influence,Role Playing,3
+Area Control / Area Influence,Roll / Spin and Move,4
+Area Control / Area Influence,Route/Network Building,37
+Area Control / Area Influence,Secret Unit Deployment,29
+Area Control / Area Influence,Set Collection,102
+Area Control / Area Influence,Simulation,25
+Area Control / Area Influence,Simultaneous Action Selection,68
+Area Control / Area Influence,Stock Holding,19
+Area Control / Area Influence,Take That,29
+Area Control / Area Influence,Tile Placement,137
+Area Control / Area Influence,Time Track,7
+Area Control / Area Influence,Trading,22
+Area Control / Area Influence,Trick-taking,4
+Area Control / Area Influence,Variable Phase Order,36
+Area Control / Area Influence,Variable Player Powers,135
+Area Control / Area Influence,Voting,22
+Area Control / Area Influence,Worker Placement,80
+Area Enclosure,Area Movement,4
+Area Enclosure,Auction/Bidding,5
+Area Enclosure,Betting/Wagering,1
+Area Enclosure,Card Drafting,9
+Area Enclosure,Co-operative Play,2
+Area Enclosure,Commodity Speculation,4
+Area Enclosure,Crayon Rail System,1
+Area Enclosure,Deck / Pool Building,4
+Area Enclosure,Dice Rolling,13
+Area Enclosure,Grid Movement,19
+Area Enclosure,Hand Management,32
+Area Enclosure,Hex-and-Counter,3
+Area Enclosure,Memory,3
+Area Enclosure,Modular Board,24
+Area Enclosure,Paper-and-Pencil,1
+Area Enclosure,Pattern Building,9
+Area Enclosure,Pattern Recognition,3
+Area Enclosure,Pick-up and Deliver,2
+Area Enclosure,Player Elimination,1
+Area Enclosure,Point to Point Movement,3
+Area Enclosure,Press Your Luck,2
+Area Enclosure,Role Playing,1
+Area Enclosure,Route/Network Building,11
+Area Enclosure,Set Collection,16
+Area Enclosure,Simulation,1
+Area Enclosure,Simultaneous Action Selection,4
+Area Enclosure,Stock Holding,5
+Area Enclosure,Take That,3
+Area Enclosure,Tile Placement,48
+Area Enclosure,Time Track,1
+Area Enclosure,Variable Phase Order,5
+Area Enclosure,Variable Player Powers,2
+Area Enclosure,Worker Placement,9
+Area Movement,Area-Impulse,21
+Area Movement,Auction/Bidding,33
+Area Movement,Betting/Wagering,1
+Area Movement,Campaign / Battle Card Driven,51
+Area Movement,Card Drafting,38
+Area Movement,Chit-Pull System,10
+Area Movement,Co-operative Play,42
+Area Movement,Commodity Speculation,4
+Area Movement,Deck / Pool Building,7
+Area Movement,Dice Rolling,268
+Area Movement,Grid Movement,8
+Area Movement,Hand Management,104
+Area Movement,Hex-and-Counter,20
+Area Movement,Line Drawing,1
+Area Movement,Memory,18
+Area Movement,Modular Board,66
+Area Movement,Paper-and-Pencil,5
+Area Movement,Partnerships,46
+Area Movement,Pattern Building,2
+Area Movement,Pattern Recognition,2
+Area Movement,Pick-up and Deliver,35
+Area Movement,Player Elimination,23
+Area Movement,Point to Point Movement,20
+Area Movement,Press Your Luck,12
+Area Movement,Rock-Paper-Scissors,6
+Area Movement,Role Playing,20
+Area Movement,Roll / Spin and Move,17
+Area Movement,Route/Network Building,10
+Area Movement,Secret Unit Deployment,64
+Area Movement,Set Collection,49
+Area Movement,Simulation,55
+Area Movement,Simultaneous Action Selection,46
+Area Movement,Stock Holding,4
+Area Movement,Storytelling,5
+Area Movement,Take That,10
+Area Movement,Tile Placement,23
+Area Movement,Time Track,9
+Area Movement,Trading,23
+Area Movement,Trick-taking,1
+Area Movement,Variable Phase Order,21
+Area Movement,Variable Player Powers,120
+Area Movement,Voting,12
+Area Movement,Worker Placement,12
+Area-Impulse,Auction/Bidding,1
+Area-Impulse,Campaign / Battle Card Driven,3
+Area-Impulse,Chit-Pull System,2
+Area-Impulse,Deck / Pool Building,1
+Area-Impulse,Dice Rolling,24
+Area-Impulse,Hand Management,2
+Area-Impulse,Hex-and-Counter,8
+Area-Impulse,Memory,1
+Area-Impulse,Modular Board,2
+Area-Impulse,Pick-up and Deliver,1
+Area-Impulse,Point to Point Movement,3
+Area-Impulse,Rock-Paper-Scissors,1
+Area-Impulse,Route/Network Building,1
+Area-Impulse,Secret Unit Deployment,14
+Area-Impulse,Set Collection,1
+Area-Impulse,Simulation,8
+Area-Impulse,Simultaneous Action Selection,5
+Area-Impulse,Tile Placement,1
+Area-Impulse,Trading,1
+Area-Impulse,Variable Phase Order,1
+Area-Impulse,Variable Player Powers,2
+Area-Impulse,Voting,1
+Auction/Bidding,Betting/Wagering,16
+Auction/Bidding,Campaign / Battle Card Driven,3
+Auction/Bidding,Card Drafting,81
+Auction/Bidding,Co-operative Play,4
+Auction/Bidding,Commodity Speculation,49
+Auction/Bidding,Crayon Rail System,2
+Auction/Bidding,Deck / Pool Building,12
+Auction/Bidding,Dice Rolling,80
+Auction/Bidding,Grid Movement,9
+Auction/Bidding,Hand Management,134
+Auction/Bidding,Hex-and-Counter,6
+Auction/Bidding,Memory,23
+Auction/Bidding,Modular Board,26
+Auction/Bidding,Paper-and-Pencil,3
+Auction/Bidding,Partnerships,23
+Auction/Bidding,Pattern Building,6
+Auction/Bidding,Pattern Recognition,1
+Auction/Bidding,Pick-up and Deliver,32
+Auction/Bidding,Player Elimination,19
+Auction/Bidding,Point to Point Movement,14
+Auction/Bidding,Press Your Luck,20
+Auction/Bidding,Rock-Paper-Scissors,5
+Auction/Bidding,Role Playing,3
+Auction/Bidding,Roll / Spin and Move,80
+Auction/Bidding,Route/Network Building,61
+Auction/Bidding,Secret Unit Deployment,10
+Auction/Bidding,Set Collection,206
+Auction/Bidding,Simulation,19
+Auction/Bidding,Simultaneous Action Selection,62
+Auction/Bidding,Singing,1
+Auction/Bidding,Stock Holding,65
+Auction/Bidding,Storytelling,1
+Auction/Bidding,Take That,14
+Auction/Bidding,Tile Placement,77
+Auction/Bidding,Time Track,4
+Auction/Bidding,Trading,110
+Auction/Bidding,Trick-taking,7
+Auction/Bidding,Variable Phase Order,19
+Auction/Bidding,Variable Player Powers,66
+Auction/Bidding,Voting,18
+Auction/Bidding,Worker Placement,54
+Betting/Wagering,Card Drafting,6
+Betting/Wagering,Co-operative Play,3
+Betting/Wagering,Commodity Speculation,10
+Betting/Wagering,Deck / Pool Building,2
+Betting/Wagering,Dice Rolling,50
+Betting/Wagering,Grid Movement,4
+Betting/Wagering,Hand Management,41
+Betting/Wagering,Memory,7
+Betting/Wagering,Modular Board,3
+Betting/Wagering,Paper-and-Pencil,6
+Betting/Wagering,Partnerships,7
+Betting/Wagering,Pick-up and Deliver,3
+Betting/Wagering,Player Elimination,8
+Betting/Wagering,Point to Point Movement,2
+Betting/Wagering,Press Your Luck,24
+Betting/Wagering,Rock-Paper-Scissors,3
+Betting/Wagering,Role Playing,5
+Betting/Wagering,Roll / Spin and Move,29
+Betting/Wagering,Route/Network Building,1
+Betting/Wagering,Secret Unit Deployment,4
+Betting/Wagering,Set Collection,23
+Betting/Wagering,Simulation,3
+Betting/Wagering,Simultaneous Action Selection,11
+Betting/Wagering,Singing,2
+Betting/Wagering,Stock Holding,7
+Betting/Wagering,Storytelling,3
+Betting/Wagering,Take That,5
+Betting/Wagering,Tile Placement,5
+Betting/Wagering,Trading,7
+Betting/Wagering,Trick-taking,11
+Betting/Wagering,Variable Phase Order,1
+Betting/Wagering,Variable Player Powers,19
+Betting/Wagering,Voting,7
+Betting/Wagering,Worker Placement,3
+Campaign / Battle Card Driven,Card Drafting,19
+Campaign / Battle Card Driven,Chit-Pull System,7
+Campaign / Battle Card Driven,Co-operative Play,12
+Campaign / Battle Card Driven,Commodity Speculation,1
+Campaign / Battle Card Driven,Deck / Pool Building,4
+Campaign / Battle Card Driven,Dice Rolling,133
+Campaign / Battle Card Driven,Grid Movement,13
+Campaign / Battle Card Driven,Hand Management,86
+Campaign / Battle Card Driven,Hex-and-Counter,29
+Campaign / Battle Card Driven,Line Drawing,1
+Campaign / Battle Card Driven,Memory,1
+Campaign / Battle Card Driven,Modular Board,32
+Campaign / Battle Card Driven,Paper-and-Pencil,1
+Campaign / Battle Card Driven,Partnerships,9
+Campaign / Battle Card Driven,Pattern Building,1
+Campaign / Battle Card Driven,Pick-up and Deliver,4
+Campaign / Battle Card Driven,Player Elimination,7
+Campaign / Battle Card Driven,Point to Point Movement,60
+Campaign / Battle Card Driven,Press Your Luck,2
+Campaign / Battle Card Driven,Rock-Paper-Scissors,4
+Campaign / Battle Card Driven,Role Playing,3
+Campaign / Battle Card Driven,Roll / Spin and Move,7
+Campaign / Battle Card Driven,Secret Unit Deployment,26
+Campaign / Battle Card Driven,Set Collection,8
+Campaign / Battle Card Driven,Simulation,31
+Campaign / Battle Card Driven,Simultaneous Action Selection,15
+Campaign / Battle Card Driven,Storytelling,1
+Campaign / Battle Card Driven,Take That,4
+Campaign / Battle Card Driven,Tile Placement,3
+Campaign / Battle Card Driven,Time Track,3
+Campaign / Battle Card Driven,Trading,7
+Campaign / Battle Card Driven,Variable Phase Order,12
+Campaign / Battle Card Driven,Variable Player Powers,54
+Campaign / Battle Card Driven,Voting,5
+Campaign / Battle Card Driven,Worker Placement,2
+Card Drafting,Chit-Pull System,1
+Card Drafting,Co-operative Play,25
+Card Drafting,Commodity Speculation,16
+Card Drafting,Deck / Pool Building,116
+Card Drafting,Dice Rolling,139
+Card Drafting,Grid Movement,19
+Card Drafting,Hand Management,374
+Card Drafting,Hex-and-Counter,5
+Card Drafting,Line Drawing,2
+Card Drafting,Memory,32
+Card Drafting,Modular Board,49
+Card Drafting,Paper-and-Pencil,3
+Card Drafting,Partnerships,36
+Card Drafting,Pattern Building,24
+Card Drafting,Pattern Recognition,5
+Card Drafting,Pick-up and Deliver,21
+Card Drafting,Player Elimination,20
+Card Drafting,Point to Point Movement,48
+Card Drafting,Press Your Luck,33
+Card Drafting,Rock-Paper-Scissors,4
+Card Drafting,Role Playing,21
+Card Drafting,Roll / Spin and Move,15
+Card Drafting,Route/Network Building,43
+Card Drafting,Secret Unit Deployment,14
+Card Drafting,Set Collection,244
+Card Drafting,Simulation,27
+Card Drafting,Simultaneous Action Selection,56
+Card Drafting,Singing,2
+Card Drafting,Stock Holding,12
+Card Drafting,Storytelling,13
+Card Drafting,Take That,41
+Card Drafting,Tile Placement,77
+Card Drafting,Time Track,7
+Card Drafting,Trading,36
+Card Drafting,Trick-taking,10
+Card Drafting,Variable Phase Order,27
+Card Drafting,Variable Player Powers,124
+Card Drafting,Voting,8
+Card Drafting,Worker Placement,67
+Chit-Pull System,Co-operative Play,6
+Chit-Pull System,Dice Rolling,58
+Chit-Pull System,Grid Movement,1
+Chit-Pull System,Hand Management,1
+Chit-Pull System,Hex-and-Counter,82
+Chit-Pull System,Modular Board,2
+Chit-Pull System,Partnerships,2
+Chit-Pull System,Pick-up and Deliver,1
+Chit-Pull System,Point to Point Movement,9
+Chit-Pull System,Press Your Luck,4
+Chit-Pull System,Route/Network Building,1
+Chit-Pull System,Secret Unit Deployment,9
+Chit-Pull System,Set Collection,4
+Chit-Pull System,Simulation,26
+Chit-Pull System,Simultaneous Action Selection,1
+Chit-Pull System,Tile Placement,1
+Chit-Pull System,Trading,1
+Chit-Pull System,Variable Phase Order,6
+Chit-Pull System,Variable Player Powers,6
+Co-operative Play,Commodity Speculation,1
+Co-operative Play,Deck / Pool Building,49
+Co-operative Play,Dice Rolling,194
+Co-operative Play,Grid Movement,46
+Co-operative Play,Hand Management,103
+Co-operative Play,Hex-and-Counter,10
+Co-operative Play,Line Drawing,3
+Co-operative Play,Memory,30
+Co-operative Play,Modular Board,100
+Co-operative Play,Paper-and-Pencil,5
+Co-operative Play,Partnerships,46
+Co-operative Play,Pattern Building,7
+Co-operative Play,Pattern Recognition,15
+Co-operative Play,Pick-up and Deliver,21
+Co-operative Play,Player Elimination,14
+Co-operative Play,Point to Point Movement,34
+Co-operative Play,Press Your Luck,18
+Co-operative Play,Rock-Paper-Scissors,2
+Co-operative Play,Role Playing,64
+Co-operative Play,Roll / Spin and Move,29
+Co-operative Play,Route/Network Building,3
+Co-operative Play,Secret Unit Deployment,10
+Co-operative Play,Set Collection,36
+Co-operative Play,Simulation,13
+Co-operative Play,Simultaneous Action Selection,27
+Co-operative Play,Singing,6
+Co-operative Play,Storytelling,28
+Co-operative Play,Take That,4
+Co-operative Play,Tile Placement,31
+Co-operative Play,Time Track,11
+Co-operative Play,Trading,17
+Co-operative Play,Variable Phase Order,11
+Co-operative Play,Variable Player Powers,180
+Co-operative Play,Voting,11
+Co-operative Play,Worker Placement,5
+Commodity Speculation,Crayon Rail System,1
+Commodity Speculation,Deck / Pool Building,1
+Commodity Speculation,Dice Rolling,26
+Commodity Speculation,Grid Movement,3
+Commodity Speculation,Hand Management,26
+Commodity Speculation,Hex-and-Counter,2
+Commodity Speculation,Line Drawing,1
+Commodity Speculation,Memory,6
+Commodity Speculation,Modular Board,14
+Commodity Speculation,Paper-and-Pencil,2
+Commodity Speculation,Partnerships,6
+Commodity Speculation,Pattern Building,1
+Commodity Speculation,Pick-up and Deliver,21
+Commodity Speculation,Player Elimination,5
+Commodity Speculation,Point to Point Movement,5
+Commodity Speculation,Press Your Luck,4
+Commodity Speculation,Role Playing,2
+Commodity Speculation,Roll / Spin and Move,15
+Commodity Speculation,Route/Network Building,12
+Commodity Speculation,Secret Unit Deployment,3
+Commodity Speculation,Set Collection,26
+Commodity Speculation,Simulation,9
+Commodity Speculation,Simultaneous Action Selection,10
+Commodity Speculation,Stock Holding,35
+Commodity Speculation,Storytelling,1
+Commodity Speculation,Take That,2
+Commodity Speculation,Tile Placement,20
+Commodity Speculation,Time Track,3
+Commodity Speculation,Trading,33
+Commodity Speculation,Variable Phase Order,10
+Commodity Speculation,Variable Player Powers,14
+Commodity Speculation,Voting,6
+Commodity Speculation,Worker Placement,15
+Crayon Rail System,Line Drawing,1
+Crayon Rail System,Pick-up and Deliver,14
+Crayon Rail System,Route/Network Building,14
+Crayon Rail System,Stock Holding,1
+Deck / Pool Building,Dice Rolling,69
+Deck / Pool Building,Grid Movement,14
+Deck / Pool Building,Hand Management,170
+Deck / Pool Building,Hex-and-Counter,2
+Deck / Pool Building,Line Drawing,1
+Deck / Pool Building,Memory,2
+Deck / Pool Building,Modular Board,22
+Deck / Pool Building,Paper-and-Pencil,1
+Deck / Pool Building,Partnerships,13
+Deck / Pool Building,Pattern Building,3
+Deck / Pool Building,Pick-up and Deliver,4
+Deck / Pool Building,Player Elimination,13
+Deck / Pool Building,Point to Point Movement,18
+Deck / Pool Building,Press Your Luck,12
+Deck / Pool Building,Rock-Paper-Scissors,5
+Deck / Pool Building,Role Playing,10
+Deck / Pool Building,Roll / Spin and Move,3
+Deck / Pool Building,Route/Network Building,5
+Deck / Pool Building,Secret Unit Deployment,5
+Deck / Pool Building,Set Collection,29
+Deck / Pool Building,Simulation,5
+Deck / Pool Building,Simultaneous Action Selection,9
+Deck / Pool Building,Stock Holding,1
+Deck / Pool Building,Storytelling,2
+Deck / Pool Building,Take That,17
+Deck / Pool Building,Tile Placement,13
+Deck / Pool Building,Time Track,3
+Deck / Pool Building,Trading,9
+Deck / Pool Building,Variable Phase Order,6
+Deck / Pool Building,Variable Player Powers,77
+Deck / Pool Building,Voting,1
+Deck / Pool Building,Worker Placement,26
+Dice Rolling,Grid Movement,155
+Dice Rolling,Hand Management,344
+Dice Rolling,Hex-and-Counter,420
+Dice Rolling,Line Drawing,11
+Dice Rolling,Memory,52
+Dice Rolling,Modular Board,322
+Dice Rolling,Paper-and-Pencil,40
+Dice Rolling,Partnerships,98
+Dice Rolling,Pattern Building,36
+Dice Rolling,Pattern Recognition,33
+Dice Rolling,Pick-up and Deliver,74
+Dice Rolling,Player Elimination,63
+Dice Rolling,Point to Point Movement,156
+Dice Rolling,Press Your Luck,168
+Dice Rolling,Rock-Paper-Scissors,12
+Dice Rolling,Role Playing,112
+Dice Rolling,Roll / Spin and Move,179
+Dice Rolling,Route/Network Building,47
+Dice Rolling,Secret Unit Deployment,127
+Dice Rolling,Set Collection,206
+Dice Rolling,Simulation,265
+Dice Rolling,Simultaneous Action Selection,94
+Dice Rolling,Singing,3
+Dice Rolling,Stock Holding,16
+Dice Rolling,Storytelling,32
+Dice Rolling,Take That,57
+Dice Rolling,Tile Placement,103
+Dice Rolling,Time Track,16
+Dice Rolling,Trading,98
+Dice Rolling,Trick-taking,5
+Dice Rolling,Variable Phase Order,61
+Dice Rolling,Variable Player Powers,524
+Dice Rolling,Voting,26
+Dice Rolling,Worker Placement,78
+Grid Movement,Hand Management,87
+Grid Movement,Hex-and-Counter,11
+Grid Movement,Line Drawing,2
+Grid Movement,Memory,19
+Grid Movement,Modular Board,136
+Grid Movement,Paper-and-Pencil,1
+Grid Movement,Partnerships,36
+Grid Movement,Pattern Building,15
+Grid Movement,Pattern Recognition,1
+Grid Movement,Pick-up and Deliver,27
+Grid Movement,Player Elimination,21
+Grid Movement,Point to Point Movement,9
+Grid Movement,Press Your Luck,16
+Grid Movement,Rock-Paper-Scissors,4
+Grid Movement,Role Playing,22
+Grid Movement,Roll / Spin and Move,19
+Grid Movement,Route/Network Building,14
+Grid Movement,Secret Unit Deployment,20
+Grid Movement,Set Collection,27
+Grid Movement,Simulation,9
+Grid Movement,Simultaneous Action Selection,20
+Grid Movement,Stock Holding,3
+Grid Movement,Storytelling,1
+Grid Movement,Take That,15
+Grid Movement,Tile Placement,51
+Grid Movement,Time Track,4
+Grid Movement,Trading,9
+Grid Movement,Trick-taking,1
+Grid Movement,Variable Phase Order,12
+Grid Movement,Variable Player Powers,142
+Grid Movement,Voting,1
+Grid Movement,Worker Placement,6
+Hand Management,Hex-and-Counter,16
+Hand Management,Line Drawing,3
+Hand Management,Memory,100
+Hand Management,Modular Board,175
+Hand Management,Paper-and-Pencil,8
+Hand Management,Partnerships,118
+Hand Management,Pattern Building,61
+Hand Management,Pattern Recognition,20
+Hand Management,Pick-up and Deliver,50
+Hand Management,Player Elimination,82
+Hand Management,Point to Point Movement,111
+Hand Management,Press Your Luck,58
+Hand Management,Rock-Paper-Scissors,25
+Hand Management,Role Playing,32
+Hand Management,Roll / Spin and Move,32
+Hand Management,Route/Network Building,72
+Hand Management,Secret Unit Deployment,59
+Hand Management,Set Collection,430
+Hand Management,Simulation,54
+Hand Management,Simultaneous Action Selection,191
+Hand Management,Singing,4
+Hand Management,Stock Holding,18
+Hand Management,Storytelling,19
+Hand Management,Take That,152
+Hand Management,Tile Placement,163
+Hand Management,Time Track,9
+Hand Management,Trading,86
+Hand Management,Trick-taking,53
+Hand Management,Variable Phase Order,51
+Hand Management,Variable Player Powers,392
+Hand Management,Voting,32
+Hand Management,Worker Placement,74
+Hex-and-Counter,Memory,2
+Hex-and-Counter,Modular Board,63
+Hex-and-Counter,Paper-and-Pencil,5
+Hex-and-Counter,Partnerships,6
+Hex-and-Counter,Pattern Building,1
+Hex-and-Counter,Pick-up and Deliver,5
+Hex-and-Counter,Player Elimination,3
+Hex-and-Counter,Point to Point Movement,9
+Hex-and-Counter,Press Your Luck,2
+Hex-and-Counter,Rock-Paper-Scissors,3
+Hex-and-Counter,Role Playing,15
+Hex-and-Counter,Roll / Spin and Move,6
+Hex-and-Counter,Route/Network Building,2
+Hex-and-Counter,Secret Unit Deployment,64
+Hex-and-Counter,Set Collection,4
+Hex-and-Counter,Simulation,295
+Hex-and-Counter,Simultaneous Action Selection,45
+Hex-and-Counter,Stock Holding,1
+Hex-and-Counter,Take That,4
+Hex-and-Counter,Tile Placement,10
+Hex-and-Counter,Time Track,3
+Hex-and-Counter,Trading,7
+Hex-and-Counter,Variable Phase Order,20
+Hex-and-Counter,Variable Player Powers,55
+Hex-and-Counter,Voting,5
+Hex-and-Counter,Worker Placement,2
+Line Drawing,Memory,1
+Line Drawing,Modular Board,4
+Line Drawing,Paper-and-Pencil,16
+Line Drawing,Partnerships,15
+Line Drawing,Pattern Recognition,2
+Line Drawing,Pick-up and Deliver,6
+Line Drawing,Press Your Luck,1
+Line Drawing,Role Playing,1
+Line Drawing,Roll / Spin and Move,7
+Line Drawing,Route/Network Building,5
+Line Drawing,Secret Unit Deployment,3
+Line Drawing,Set Collection,1
+Line Drawing,Simultaneous Action Selection,2
+Line Drawing,Singing,3
+Line Drawing,Storytelling,2
+Line Drawing,Take That,1
+Line Drawing,Tile Placement,1
+Line Drawing,Variable Player Powers,1
+Line Drawing,Voting,2
+Memory,Modular Board,29
+Memory,Paper-and-Pencil,8
+Memory,Partnerships,35
+Memory,Pattern Building,13
+Memory,Pattern Recognition,27
+Memory,Pick-up and Deliver,9
+Memory,Player Elimination,27
+Memory,Point to Point Movement,12
+Memory,Press Your Luck,25
+Memory,Rock-Paper-Scissors,9
+Memory,Role Playing,7
+Memory,Roll / Spin and Move,27
+Memory,Route/Network Building,10
+Memory,Secret Unit Deployment,30
+Memory,Set Collection,73
+Memory,Simulation,2
+Memory,Simultaneous Action Selection,28
+Memory,Singing,5
+Memory,Stock Holding,1
+Memory,Storytelling,10
+Memory,Take That,12
+Memory,Tile Placement,21
+Memory,Time Track,1
+Memory,Trading,26
+Memory,Trick-taking,6
+Memory,Variable Phase Order,2
+Memory,Variable Player Powers,34
+Memory,Voting,11
+Memory,Worker Placement,5
+Modular Board,Paper-and-Pencil,1
+Modular Board,Partnerships,51
+Modular Board,Pattern Building,19
+Modular Board,Pattern Recognition,7
+Modular Board,Pick-up and Deliver,68
+Modular Board,Player Elimination,27
+Modular Board,Point to Point Movement,43
+Modular Board,Press Your Luck,25
+Modular Board,Rock-Paper-Scissors,8
+Modular Board,Role Playing,69
+Modular Board,Roll / Spin and Move,51
+Modular Board,Route/Network Building,45
+Modular Board,Secret Unit Deployment,32
+Modular Board,Set Collection,83
+Modular Board,Simulation,33
+Modular Board,Simultaneous Action Selection,49
+Modular Board,Stock Holding,6
+Modular Board,Storytelling,6
+Modular Board,Take That,18
+Modular Board,Tile Placement,169
+Modular Board,Time Track,11
+Modular Board,Trading,33
+Modular Board,Trick-taking,1
+Modular Board,Variable Phase Order,28
+Modular Board,Variable Player Powers,244
+Modular Board,Voting,10
+Modular Board,Worker Placement,44
+Paper-and-Pencil,Partnerships,13
+Paper-and-Pencil,Pattern Building,4
+Paper-and-Pencil,Pattern Recognition,4
+Paper-and-Pencil,Pick-up and Deliver,3
+Paper-and-Pencil,Player Elimination,3
+Paper-and-Pencil,Point to Point Movement,4
+Paper-and-Pencil,Press Your Luck,3
+Paper-and-Pencil,Role Playing,3
+Paper-and-Pencil,Roll / Spin and Move,16
+Paper-and-Pencil,Route/Network Building,3
+Paper-and-Pencil,Secret Unit Deployment,9
+Paper-and-Pencil,Set Collection,3
+Paper-and-Pencil,Simulation,7
+Paper-and-Pencil,Simultaneous Action Selection,6
+Paper-and-Pencil,Singing,7
+Paper-and-Pencil,Stock Holding,1
+Paper-and-Pencil,Storytelling,5
+Paper-and-Pencil,Time Track,1
+Paper-and-Pencil,Trading,1
+Paper-and-Pencil,Variable Phase Order,1
+Paper-and-Pencil,Variable Player Powers,6
+Paper-and-Pencil,Voting,12
+Paper-and-Pencil,Worker Placement,1
+Partnerships,Pattern Building,14
+Partnerships,Pattern Recognition,7
+Partnerships,Pick-up and Deliver,12
+Partnerships,Player Elimination,40
+Partnerships,Point to Point Movement,28
+Partnerships,Press Your Luck,16
+Partnerships,Rock-Paper-Scissors,4
+Partnerships,Role Playing,50
+Partnerships,Roll / Spin and Move,23
+Partnerships,Route/Network Building,8
+Partnerships,Secret Unit Deployment,28
+Partnerships,Set Collection,26
+Partnerships,Simulation,8
+Partnerships,Simultaneous Action Selection,27
+Partnerships,Singing,4
+Partnerships,Stock Holding,2
+Partnerships,Storytelling,21
+Partnerships,Take That,16
+Partnerships,Tile Placement,26
+Partnerships,Time Track,1
+Partnerships,Trading,15
+Partnerships,Trick-taking,11
+Partnerships,Variable Phase Order,13
+Partnerships,Variable Player Powers,141
+Partnerships,Voting,46
+Partnerships,Worker Placement,6
+Pattern Building,Pattern Recognition,43
+Pattern Building,Pick-up and Deliver,2
+Pattern Building,Player Elimination,1
+Pattern Building,Point to Point Movement,7
+Pattern Building,Press Your Luck,7
+Pattern Building,Roll / Spin and Move,2
+Pattern Building,Route/Network Building,8
+Pattern Building,Set Collection,39
+Pattern Building,Simultaneous Action Selection,6
+Pattern Building,Stock Holding,2
+Pattern Building,Take That,6
+Pattern Building,Tile Placement,105
+Pattern Building,Trading,3
+Pattern Building,Variable Player Powers,9
+Pattern Building,Voting,1
+Pattern Building,Worker Placement,6
+Pattern Recognition,Pick-up and Deliver,3
+Pattern Recognition,Player Elimination,5
+Pattern Recognition,Press Your Luck,6
+Pattern Recognition,Route/Network Building,7
+Pattern Recognition,Secret Unit Deployment,2
+Pattern Recognition,Set Collection,20
+Pattern Recognition,Simultaneous Action Selection,7
+Pattern Recognition,Storytelling,6
+Pattern Recognition,Take That,3
+Pattern Recognition,Tile Placement,23
+Pattern Recognition,Time Track,1
+Pattern Recognition,Trading,1
+Pattern Recognition,Variable Phase Order,2
+Pattern Recognition,Variable Player Powers,1
+Pattern Recognition,Voting,4
+Pick-up and Deliver,Player Elimination,2
+Pick-up and Deliver,Point to Point Movement,54
+Pick-up and Deliver,Press Your Luck,9
+Pick-up and Deliver,Rock-Paper-Scissors,2
+Pick-up and Deliver,Role Playing,10
+Pick-up and Deliver,Roll / Spin and Move,40
+Pick-up and Deliver,Route/Network Building,48
+Pick-up and Deliver,Secret Unit Deployment,5
+Pick-up and Deliver,Set Collection,55
+Pick-up and Deliver,Simulation,11
+Pick-up and Deliver,Simultaneous Action Selection,20
+Pick-up and Deliver,Stock Holding,7
+Pick-up and Deliver,Storytelling,1
+Pick-up and Deliver,Take That,7
+Pick-up and Deliver,Tile Placement,41
+Pick-up and Deliver,Time Track,3
+Pick-up and Deliver,Trading,26
+Pick-up and Deliver,Trick-taking,1
+Pick-up and Deliver,Variable Phase Order,6
+Pick-up and Deliver,Variable Player Powers,46
+Pick-up and Deliver,Voting,2
+Pick-up and Deliver,Worker Placement,20
+Player Elimination,Point to Point Movement,8
+Player Elimination,Press Your Luck,26
+Player Elimination,Rock-Paper-Scissors,5
+Player Elimination,Role Playing,14
+Player Elimination,Roll / Spin and Move,11
+Player Elimination,Route/Network Building,6
+Player Elimination,Secret Unit Deployment,7
+Player Elimination,Set Collection,16
+Player Elimination,Simulation,12
+Player Elimination,Simultaneous Action Selection,36
+Player Elimination,Singing,1
+Player Elimination,Stock Holding,3
+Player Elimination,Storytelling,4
+Player Elimination,Take That,33
+Player Elimination,Tile Placement,12
+Player Elimination,Trading,6
+Player Elimination,Trick-taking,2
+Player Elimination,Variable Phase Order,7
+Player Elimination,Variable Player Powers,81
+Player Elimination,Voting,11
+Player Elimination,Worker Placement,3
+Point to Point Movement,Press Your Luck,9
+Point to Point Movement,Rock-Paper-Scissors,7
+Point to Point Movement,Role Playing,11
+Point to Point Movement,Roll / Spin and Move,31
+Point to Point Movement,Route/Network Building,27
+Point to Point Movement,Secret Unit Deployment,37
+Point to Point Movement,Set Collection,56
+Point to Point Movement,Simulation,27
+Point to Point Movement,Simultaneous Action Selection,30
+Point to Point Movement,Stock Holding,3
+Point to Point Movement,Storytelling,6
+Point to Point Movement,Take That,5
+Point to Point Movement,Tile Placement,28
+Point to Point Movement,Time Track,13
+Point to Point Movement,Trading,12
+Point to Point Movement,Variable Phase Order,10
+Point to Point Movement,Variable Player Powers,91
+Point to Point Movement,Voting,2
+Point to Point Movement,Worker Placement,19
+Press Your Luck,Rock-Paper-Scissors,3
+Press Your Luck,Role Playing,6
+Press Your Luck,Roll / Spin and Move,20
+Press Your Luck,Route/Network Building,5
+Press Your Luck,Secret Unit Deployment,7
+Press Your Luck,Set Collection,83
+Press Your Luck,Simulation,10
+Press Your Luck,Simultaneous Action Selection,19
+Press Your Luck,Stock Holding,4
+Press Your Luck,Storytelling,1
+Press Your Luck,Take That,16
+Press Your Luck,Tile Placement,24
+Press Your Luck,Time Track,2
+Press Your Luck,Trading,5
+Press Your Luck,Trick-taking,1
+Press Your Luck,Variable Phase Order,3
+Press Your Luck,Variable Player Powers,47
+Press Your Luck,Worker Placement,13
+Rock-Paper-Scissors,Role Playing,4
+Rock-Paper-Scissors,Roll / Spin and Move,4
+Rock-Paper-Scissors,Route/Network Building,1
+Rock-Paper-Scissors,Secret Unit Deployment,7
+Rock-Paper-Scissors,Set Collection,6
+Rock-Paper-Scissors,Simulation,4
+Rock-Paper-Scissors,Simultaneous Action Selection,34
+Rock-Paper-Scissors,Stock Holding,1
+Rock-Paper-Scissors,Storytelling,1
+Rock-Paper-Scissors,Take That,4
+Rock-Paper-Scissors,Tile Placement,5
+Rock-Paper-Scissors,Trading,6
+Rock-Paper-Scissors,Trick-taking,1
+Rock-Paper-Scissors,Variable Phase Order,1
+Rock-Paper-Scissors,Variable Player Powers,22
+Rock-Paper-Scissors,Voting,2
+Rock-Paper-Scissors,Worker Placement,1
+Role Playing,Roll / Spin and Move,21
+Role Playing,Route/Network Building,1
+Role Playing,Secret Unit Deployment,5
+Role Playing,Set Collection,8
+Role Playing,Simulation,10
+Role Playing,Simultaneous Action Selection,14
+Role Playing,Singing,2
+Role Playing,Storytelling,35
+Role Playing,Take That,2
+Role Playing,Tile Placement,14
+Role Playing,Time Track,2
+Role Playing,Trading,9
+Role Playing,Trick-taking,1
+Role Playing,Variable Phase Order,6
+Role Playing,Variable Player Powers,130
+Role Playing,Voting,26
+Role Playing,Worker Placement,1
+Roll / Spin and Move,Route/Network Building,2
+Roll / Spin and Move,Secret Unit Deployment,5
+Roll / Spin and Move,Set Collection,133
+Roll / Spin and Move,Simulation,18
+Roll / Spin and Move,Simultaneous Action Selection,8
+Roll / Spin and Move,Singing,5
+Roll / Spin and Move,Stock Holding,20
+Roll / Spin and Move,Storytelling,3
+Roll / Spin and Move,Take That,5
+Roll / Spin and Move,Tile Placement,23
+Roll / Spin and Move,Trading,94
+Roll / Spin and Move,Variable Phase Order,3
+Roll / Spin and Move,Variable Player Powers,39
+Roll / Spin and Move,Voting,10
+Roll / Spin and Move,Worker Placement,1
+Route/Network Building,Secret Unit Deployment,1
+Route/Network Building,Set Collection,32
+Route/Network Building,Simulation,6
+Route/Network Building,Simultaneous Action Selection,6
+Route/Network Building,Stock Holding,77
+Route/Network Building,Take That,5
+Route/Network Building,Tile Placement,106
+Route/Network Building,Time Track,2
+Route/Network Building,Trading,16
+Route/Network Building,Variable Phase Order,9
+Route/Network Building,Variable Player Powers,18
+Route/Network Building,Voting,3
+Route/Network Building,Worker Placement,12
+Secret Unit Deployment,Set Collection,9
+Secret Unit Deployment,Simulation,45
+Secret Unit Deployment,Simultaneous Action Selection,35
+Secret Unit Deployment,Take That,7
+Secret Unit Deployment,Tile Placement,8
+Secret Unit Deployment,Time Track,2
+Secret Unit Deployment,Trading,5
+Secret Unit Deployment,Variable Phase Order,7
+Secret Unit Deployment,Variable Player Powers,47
+Secret Unit Deployment,Voting,7
+Secret Unit Deployment,Worker Placement,9
+Set Collection,Simulation,13
+Set Collection,Simultaneous Action Selection,66
+Set Collection,Singing,2
+Set Collection,Stock Holding,27
+Set Collection,Storytelling,6
+Set Collection,Take That,59
+Set Collection,Tile Placement,111
+Set Collection,Time Track,10
+Set Collection,Trading,160
+Set Collection,Trick-taking,17
+Set Collection,Variable Phase Order,25
+Set Collection,Variable Player Powers,104
+Set Collection,Voting,13
+Set Collection,Worker Placement,92
+Simulation,Simultaneous Action Selection,47
+Simulation,Stock Holding,6
+Simulation,Storytelling,1
+Simulation,Take That,2
+Simulation,Tile Placement,11
+Simulation,Time Track,2
+Simulation,Trading,7
+Simulation,Variable Phase Order,17
+Simulation,Variable Player Powers,35
+Simulation,Voting,8
+Simulation,Worker Placement,9
+Simultaneous Action Selection,Singing,3
+Simultaneous Action Selection,Stock Holding,7
+Simultaneous Action Selection,Storytelling,8
+Simultaneous Action Selection,Take That,21
+Simultaneous Action Selection,Tile Placement,24
+Simultaneous Action Selection,Time Track,2
+Simultaneous Action Selection,Trading,16
+Simultaneous Action Selection,Trick-taking,4
+Simultaneous Action Selection,Variable Phase Order,26
+Simultaneous Action Selection,Variable Player Powers,89
+Simultaneous Action Selection,Voting,35
+Simultaneous Action Selection,Worker Placement,21
+Singing,Storytelling,4
+Singing,Take That,1
+Singing,Voting,3
+Stock Holding,Take That,1
+Stock Holding,Tile Placement,56
+Stock Holding,Trading,28
+Stock Holding,Trick-taking,1
+Stock Holding,Variable Phase Order,5
+Stock Holding,Variable Player Powers,4
+Stock Holding,Voting,3
+Stock Holding,Worker Placement,7
+Storytelling,Take That,6
+Storytelling,Tile Placement,2
+Storytelling,Time Track,1
+Storytelling,Trading,5
+Storytelling,Trick-taking,1
+Storytelling,Variable Phase Order,1
+Storytelling,Variable Player Powers,24
+Storytelling,Voting,35
+Storytelling,Worker Placement,2
+Take That,Tile Placement,9
+Take That,Trading,6
+Take That,Trick-taking,3
+Take That,Variable Phase Order,4
+Take That,Variable Player Powers,68
+Take That,Voting,5
+Take That,Worker Placement,8
+Tile Placement,Time Track,8
+Tile Placement,Trading,17
+Tile Placement,Trick-taking,2
+Tile Placement,Variable Phase Order,14
+Tile Placement,Variable Player Powers,81
+Tile Placement,Voting,8
+Tile Placement,Worker Placement,50
+Time Track,Trading,4
+Time Track,Variable Phase Order,3
+Time Track,Variable Player Powers,16
+Time Track,Voting,4
+Time Track,Worker Placement,7
+Trading,Variable Phase Order,12
+Trading,Variable Player Powers,54
+Trading,Voting,23
+Trading,Worker Placement,15
+Trick-taking,Variable Player Powers,8
+Trick-taking,Voting,2
+Trick-taking,Worker Placement,1
+Variable Phase Order,Variable Player Powers,61
+Variable Phase Order,Voting,7
+Variable Phase Order,Worker Placement,30
+Variable Player Powers,Voting,51
+Variable Player Powers,Worker Placement,51
+Voting,Worker Placement,9
