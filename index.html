@@ -1,320 +1,369 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore how board games have evolved through publishing trends, playing experiences and game mechanics.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Board Games, Reimagined</title>
+  <title>The Board-Game Boom | Board Games</title>
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Load Vega, Vega-Lite, and Vega-Embed in dependency order -->
+  <!-- Vega, Vega-Lite and Vega-Embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="main.js" defer></script>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-  <!-- HERO -->
-  <header class="hero">
-    <p class="eyebrow">BOARD GAME DATA EXPLORER</p>
+  <main class="dashboard">
 
-    <h1>Board Games, Reimagined</h1>
+    <!-- SECTION 01: INTRODUCTION -->
+    <header class="section-hero">
+      <div class="chapter-label">
+        <span class="chapter-line"></span>
+        <span>CHAPTER 01</span>
+      </div>
 
-    <p class="hero-description">
-      From classic tabletop favourites to modern strategy games,
-      board games offer countless ways to play.
-      Explore how publishing, player experiences and game mechanics
-      have changed through time.
-    </p>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>The Board-Game Boom</h1>
 
-    <a class="hero-link" href="#chapter1">
-      Explore the story <span aria-hidden="true">↓</span>
-    </a>
-  </header>
+          <p class="hero-description">
+            Every board game begins with an idea. Across the years,
+            thousands of games have been published, each adding
+            something new to the tabletop experience.
+          </p>
+        </div>
 
-  <main class="story">
+        <div class="hero-symbol" aria-hidden="true">
+          <span>♟</span>
+          <span>⚄</span>
+          <span>▱</span>
+        </div>
+      </div>
+    </header>
 
-    <!-- CHAPTER 1 -->
+    <!-- SECTION QUESTION -->
+    <div class="intro-grid">
 
-<section class="chapter-section" id="chapter1">
+      <article class="intro-card journey-card">
+        <div class="card-label">CHAPTER 01</div>
+        <h2>The Board-Game Boom</h2>
+        <p>
+          From traditional classics to modern tabletop experiences,
+          board games have continued to evolve across generations.
+        </p>
+        <a href="#publication-timeline" class="text-link">
+          Explore the journey <span aria-hidden="true">→</span>
+        </a>
+      </article>
 
-  <!-- Two aligned introduction cards -->
-  <div class="intro-grid">
-    <article class="intro-card">
-      <p class="chapter-number">CHAPTER 01</p>
-      <h2>The Board-Game Boom</h2>
-      <p>
-        Every board game begins with an idea.
-      </p>
-    </article>
+      <article class="intro-card question-card">
+        <div class="card-label gold-text">THE BIG QUESTION</div>
+        <h2>When did board games take off?</h2>
+        <p>
+          Explore the publishing timeline to discover how the number
+          of recorded games changed over time.
+        </p>
+        <span class="question-note">
+          ✦ &nbsp; A closer look at the data
+        </span>
+      </article>
 
-    <article class="intro-card">
-      <p class="chapter-number">THE BIG QUESTION</p>
-      <h3>How has publishing changed?</h3>
-      <p>
-        Thousands of games have shaped the tabletop experience.
-      </p>
-    </article>
+    </div>
+
+    <!-- CHART 1 -->
+    
+<section id="publication-timeline" class="chart-card">
+  <div class="chart-heading">
+    <div class="chart-icon" aria-hidden="true">↗</div>
+    <div>
+      <h2>Publication Timeline</h2>
+      <p>When did board games take off?</p>
+    </div>
   </div>
 
-  <!-- Full-width chart underneath -->
-  <article class="timeline-card">
-    <div class="timeline-heading">
-      <div>
-        <h3>Publication Timeline</h3>
+  <div class="chart-insight-layout">
+
+    <!-- LEFT: VEGA-LITE CHART -->
+    <div class="chart-frame">
+      <div id="chart1" class="vega-chart"></div>
+    </div>
+
+    <!-- RIGHT: OBSERVATION AND INSIGHT -->
+    <aside class="insight-sidebar">
+      <article class="side-insight">
+        <span class="side-label">OBSERVATION</span>
+        <h3>Patterns over time</h3>
         <p>
-          Explore board-game publishing trends across the years.
+          Look for periods when the number of recorded
+          game releases increases or decreases.
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+        </p>
+      </article>
+
+      <article class="side-insight highlight-insight">
+        <span class="side-label">WHY IT MATTERS</span>
+        <h3>A changing hobby</h3>
+        <p>
+          These changes provide a starting point for
+          understanding how board-game publishing has evolved.
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi utnnnnnnn"
+
+        </p>
+      </article>
+
+    </aside>
+  </div>
+</section>
+
+
+<!-- SECTION 02: WHAT MAKES A MODERN BOARD GAME? -->
+<section id="section-02" class="story-section">
+
+  <header class="section-hero">
+    <div class="chapter-label">
+      <span class="chapter-line"></span>
+      <span>CHAPTER 02</span>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>What Makes a Modern Board Game?</h1>
+        <p class="hero-description">
+          Beyond the release date, a game's playing time,
+          player count and recommended age shape the
+          experience around the table.
+        </p>
+      </div>
+
+      <div class="hero-symbol" aria-hidden="true">
+        <span>◷</span>
+        <span>♟</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION INTRODUCTION -->
+  <div class="intro-grid">
+
+    <article class="intro-card journey-card">
+      <div class="card-label">THE INVESTIGATION</div>
+      <h2>Inside the Playing Experience</h2>
+      <p>
+        Compare playing-time ranges across publication eras
+        to explore how the expected length of a game varies.
+      </p>
+      <a href="#playing-time-chart" class="text-link">
+        Explore the data <span aria-hidden="true">→</span>
+      </a>
+    </article>
+
+    <article class="intro-card question-card">
+      <div class="card-label gold-text">THE BIG QUESTION</div>
+      <h2>How long is a typical game?</h2>
+      <p>
+        Do newer games tend to offer shorter sessions,
+        longer strategic experiences, or a mix of both?
+      </p>
+      <span class="question-note">
+        ✦ Compare the playing-time distribution
+      </span>
+    </article>
+
+  </div>
+
+  <!-- CHART 2: PLAYING TIME HEATMAP -->
+  <article id="playing-time-chart" class="chart-card">
+
+    <div class="chart-heading">
+      <div class="chart-icon" aria-hidden="true">◷</div>
+      <div>
+        <h2>Playing Time Across the Years</h2>
+        <p>
+          How the share of games in each playing-time range
+          differs across publication eras.
         </p>
       </div>
     </div>
 
-    <div id="chart1" class="chart-container"></div>
+    <div class="chart-insight-layout">
+
+      <!-- LEFT: CHART -->
+      <div class="chart-frame">
+        <div id="chart2" class="vega-chart"></div>
+      </div>
+
+      <!-- RIGHT: OBSERVATION AND INSIGHT -->
+      <aside class="insight-sidebar">
+
+        <article class="side-insight">
+          <span class="side-label">OBSERVATION</span>
+          <h3>Different eras, different playtimes</h3>
+          <p>
+            Compare the colours across rows to identify
+            which playing-time ranges account for a larger
+            share of games within each era.
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magn"
+
+          </p>
+        </article>
+
+        <article class="side-insight highlight-insight">
+          <span class="side-label">WHY IT MATTERS</span>
+          <h3>The experience matters</h3>
+          <p>
+            Playing time influences whether a game suits
+            a quick session or a longer gathering.
+            The distribution helps reveal the range of
+            experiences available to players.
+          </p>
+        </article>
+
+      </aside>
+    </div>
+
+    <!--
+    <div class="chart-caption">
+      <span class="caption-mark">i</span>
+      <p>
+        <strong>How to read:</strong>
+        Each row represents a publication era, and each
+        column represents a playing-time range. Darker
+        colours indicate a larger share of games within
+        that era, not a larger number of games across all eras.
+      </p>
+    </div>
+    -->
+
   </article>
+
+  <!-- TRANSITION TO THE NEXT CHART -->
+<div class="closing-note">
+  <p>
+    <strong>Next, who plays?</strong>
+    Playing time is only one part of the experience.
+    The next chart explores how many players board games
+    are designed to accommodate.
+  </p>
+</div>
+
 
 </section>
 
 
-    <!-- CHAPTER 2 -->
-    <section class="chapter" id="chapter2">
-      <div class="chapter-heading">
-        <p class="chapter-number">CHAPTER 02</p>
 
-        <h2>What Makes a Modern Board Game?</h2>
+<!-- CHART 3: PLAYER COUNT -->
+<section id="player-count" class="feature-section">
+  <!--
+<div class="feature-heading">
+  <span class="section-kicker">03 / PLAYER COUNT</span>
+  <h2>How Many Players Make the Game?</h2>
+  <p>
+    From solo sessions to group play, explore how supported
+    player counts vary across publication eras.
+  </p>
+</div>
+-->
 
-        <p class="chapter-intro">
-          A game's experience depends on more than its theme.
-          The time it takes to play, the number of people it
-          supports and the age group it targets can all influence
-          how and where it is played.
-        </p>
-      </div>
+  <div class="split-chart-card">
+    <aside class="split-chart-info">
+      <span class="chart-number">03</span>
+      <span class="insight-label">THE SOCIAL EXPERIENCE</span>
 
-      <!-- PLAYING TIME -->
-      <div class="story-grid two-columns">
-        <article class="chart-card">
-          <p class="story-label">TIME COMMITMENT</p>
-
-          <h3>How long does a game take?</h3>
-
-          <p class="chart-description">
-            Some games fit into a short break, while others are
-            designed for longer sessions. Explore the distribution
-            to see which playing times are most common in the data.
-          </p>
-
-          <div id="chart2" class="chart-container"></div>
-
-          <p class="chart-note">
-            Consider where the distribution is concentrated and
-            whether longer games form a smaller part of the dataset.
-          </p>
-        </article>
-
-        <!-- PLAYER COUNTS -->
-        <article class="chart-card">
-          <p class="story-label">SOCIAL EXPERIENCE</p>
-
-          <h3>How many people can play?</h3>
-
-          <p class="chart-description">
-            Board games bring people together in different ways.
-            Some are designed for two players, while others support
-            larger groups. Compare the supported player counts to
-            discover which configurations are common.
-          </p>
-
-          <div id="chart3" class="chart-container"></div>
-
-          <p class="chart-note">
-            Look for the player counts that appear most prominently
-            and consider what they suggest about group sizes.
-          </p>
-        </article>
-      </div>
-
-      <!-- MINIMUM AGE -->
-      <div class="story-grid age-layout">
-        <div class="story-copy">
-          <p class="story-label">WHO CAN PLAY?</p>
-
-          <h3>Games for different ages</h3>
-
-          <p>
-            Minimum age recommendations provide another way to
-            understand the intended audience of a game.
-            They may reflect the game's rules, complexity or
-            recommended level of understanding.
-          </p>
-
-          <p>
-            Explore the age distribution to see which recommendations
-            occur most frequently and how widely the dataset spans
-            different age groups.
-          </p>
-        </div>
-
-        <article class="chart-card">
-          <h3>Minimum Age</h3>
-
-          <p class="chart-description">
-            Examine the recommended minimum ages across the
-            board games included in the dataset.
-          </p>
-
-          <div id="chart4" class="chart-container"></div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CHAPTER 3 -->
-    <section class="chapter" id="chapter3">
-      <div class="chapter-heading">
-        <p class="chapter-number">CHAPTER 03</p>
-
-        <h2>The Rules of the Game Have Changed</h2>
-
-        <p class="chapter-intro">
-          Playing time and player counts tell us how games are
-          experienced. Mechanics reveal something different:
-          the systems, actions and decisions that shape gameplay.
-        </p>
-      </div>
-
-      <!-- MECHANICS ACROSS ERAS -->
-      <article class="chart-card chart-wide">
-        <div class="chart-heading">
-          <div>
-            <p class="story-label">THEN AND NOW</p>
-
-            <h3>Mechanics Across Eras</h3>
-          </div>
-
-          <p class="chart-description">
-            Compare game mechanics across different historical
-            periods. Look for mechanics that appear more frequently
-            in some eras than others, and consider how gameplay
-            design may have changed over time.
-          </p>
-        </div>
-
-        <div id="chart5" class="chart-container"></div>
-
-        <p class="chart-note">
-          Which mechanics stand out across the eras shown?
-          Use the chart to identify patterns before drawing
-          conclusions about changes in game design.
-        </p>
-      </article>
-
-      <!-- MECHANICS NETWORK INTRODUCTION -->
-      <div class="network-intro">
-        <p class="story-label">LOOK CLOSER</p>
-
-        <h3>How are game mechanics connected?</h3>
-
-        <p>
-          Many board games combine several mechanics in one
-          experience. A network view makes these relationships
-          easier to explore by showing connections between
-          mechanics in the dataset.
-        </p>
-
-        <p>
-          Select a mechanic to highlight its connections.
-          You can also adjust the connection threshold to explore
-          stronger or weaker relationships in the network.
-        </p>
-      </div>
-
-      <!-- MECHANICS NETWORK -->
-      <article class="chart-card chart-wide network-card">
-        <p class="story-label">EXPLORE THE NETWORK</p>
-
-        <h3>The Mechanics Network</h3>
-
-        <p class="chart-description">
-          Each node represents a game mechanic, while the
-          connecting lines represent relationships between
-          mechanics. Larger nodes represent mechanics with
-          higher game counts in the underlying data.
-        </p>
-
-        <div id="chart6" class="chart-container"></div>
-
-        <p class="chart-note">
-          Try selecting different mechanics and changing the
-          threshold. Which mechanics have many connections?
-          Which appear to form interesting groups?
-        </p>
-      </article>
-    </section>
-
-    <!-- CONCLUSION -->
-    <section class="closing">
-      <p class="chapter-number">THE BIGGER PICTURE</p>
-
-      <h2>One hobby, many ways to play</h2>
-
+      <h3>Who is the game designed for?</h3>
       <p>
-        Publication trends, playing experiences and game mechanics
-        offer different perspectives on the board-game landscape.
-        Together, these views help us investigate how games are
-        published, who they are designed for and how their
-        gameplay systems relate to one another.
+        Board games can be designed for solo players, pairs,
+        or larger groups. This chart compares how each supported
+        player count ranks across publication eras.
       </p>
 
-      <p>
-        The patterns in the data are a starting point for further
-        exploration. What stands out depends on the distributions,
-        historical periods and mechanic relationships revealed
-        by the charts.
+      <div class="reading-note">
+        <strong>How to read it</strong>
+        <p>
+          Rank 1 means the highest share of games supports that
+          player count. Follow each coloured line to see how its
+          relative ranking changes over time.
+        </p>
+      </div>
+
+      <p class="chart-footnote">
+        A change in rank does not necessarily mean the number
+        of games increased or decreased.
       </p>
-    </section>
+    </aside>
+
+    <div class="split-chart-visual">
+      <div id="chart3" class="vega-chart"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CHART 4: MINIMUM AGE -->
+<section id="minimum-age" class="feature-section">
+  <div class="feature-heading">
+    <span class="section-kicker">WHO CAN PLAY?</span>
+    <h2>How Old Are Board Games Designed For?</h2>
+    <p>Explore recommended minimum ages across publication eras.</p>
+  </div>
+
+  <div class="split-chart-card">
+    <aside class="split-chart-info">
+      <span class="chart-number">04</span>
+      <span class="insight-label">THE INTENDED AUDIENCE</span>
+
+      <h3>What ages do games target?</h3>
+      <p>
+        Recommended minimum ages offer a way to compare the
+        intended audiences of board games and how those
+        recommendations vary across eras.
+      </p>
+
+      <div class="reading-note">
+        <strong>How to read it</strong>
+        <p>
+          The centre line marks the median age. The box shows
+          the middle 50% of recommendations, while points beyond
+          the whiskers indicate statistical outliers.
+        </p>
+      </div>
+
+      <p class="chart-footnote">
+        Recommended minimum age is not a direct measure of
+        actual game difficulty.
+      </p>
+    </aside>
+
+    <div class="split-chart-visual age-chart-visual">
+      <div id="chart4" class="vega-chart"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    
+
+    <footer class="section-footer">
+      <p>
+        Data: BoardGameGeek-derived dataset.
+        Counts reflect the coverage and limitations of the dataset.
+      </p>
+      <a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        Back to top ↑
+      </a>
+    </footer>
 
   </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>Board Games, Reimagined</p>
-    <p>Data-driven exploration of board-game history and design.</p>
-  </footer>
-
-  <!-- CHART LOADING -->
-  <script>
-    const charts = [
-      ["chart1", "charts/chart1_released_date.json"],
-      ["chart2", "charts/chart2_playingtime_distribution.json"],
-      ["chart3", "charts/chart3_player_count_ranking.json"],
-      ["chart4", "charts/chart4_minAge.json"],
-      ["chart5", "charts/chart5_mechanics_by_era.json"],
-      ["chart6", "charts/chart6_mechanics_network.json"]
-    ];
-
-    charts.forEach(([elementId, specUrl]) => {
-      vegaEmbed(`#${elementId}`, specUrl, {
-        actions: false
-      })
-        .then(() => {
-          console.log(`${elementId} loaded successfully.`);
-        })
-        .catch(error => {
-          console.error(`Could not load ${specUrl}`, error);
-          const container = document.getElementById(elementId);
-
-          if (container) {
-            container.innerHTML =
-              '<p class="chart-error">This chart could not be loaded. Please check the chart specification and browser console.</p>';
-          }
-        });
-    });
-  </script>
 </body>
 </html>
-```
