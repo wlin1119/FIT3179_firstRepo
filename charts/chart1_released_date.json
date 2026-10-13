@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/wlin1119/FIT3179_firstRepo/refs/heads/main/chart1_release_year.csv",
+    "format": {"type": "csv"}
+  },
+  "vconcat": [
+    {
+      "title": "Games Released by Year (Selected Period)",
+      "width": 1300,
+      "height": 673,
+      "mark": {"type": "line", "point": true, "tooltip": true},
+      "encoding": {
+        "x": {
+          "field": "year_published",
+          "type": "quantitative",
+          "title": "Year Published",
+          "scale": {"domain": {"param": "brush"}},
+          "axis": {"format": "d"}
+        },
+        "y": {
+          "field": "games_released",
+          "type": "quantitative",
+          "title": "Number of Games Released"
+        }
+      }
+    },
+    {
+      "title": "Select a Range of Years",
+      "width": 1300,
+      "height": 100,
+      "params": [
+        {"name": "brush", "select": {"type": "interval", "encodings": ["x"]}}
+      ],
+      "mark": {"type": "area", "color": "#4C78A8"},
+      "encoding": {
+        "x": {
+          "field": "year_published",
+          "type": "quantitative",
+          "title": "Year Published",
+          "axis": {"format": "d"}
+        },
+        "y": {
+          "field": "games_released",
+          "type": "quantitative",
+          "title": "Games",
+          "axis": {"tickCount": 3, "grid": false}
+        }
+      }
+    }
+  ],
+"config": {
+  "font": "DM Sans",
+  "axis": {
+  "labelFont": "DM Sans",
+  "labelFontSize": 14,
+  "titleFont": "DM Sans",
+  "titleFontSize": 15
+},
+"title": {
+  "font": "Manrope",
+  "fontSize": 30
+},
+"legend": {
+  "labelFont": "DM Sans",
+  "labelFontSize": 14,
+  "titleFontSize": 15
+},
+  "view": {
+    "stroke": null
+  }
+}
+}
