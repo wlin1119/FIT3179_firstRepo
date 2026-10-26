@@ -21,7 +21,7 @@
     }
   },
   "width": 750,
-  "height": 285,
+  "height": 260,
   "background": "#F8FAFC",
   "padding": {
     "left": 10,
@@ -110,83 +110,66 @@
       ]
     }
   ],
-  "layer": [
-    {
-      "mark": {
-        "type": "line",
-        "strokeWidth": 2.5,
-        "point": {
-          "filled": true,
-          "size": 65,
-          "stroke": "#F8FAFC",
-          "strokeWidth": 1
+  
+"layer": [
+  {
+    "mark": {
+      "type": "line",
+      "strokeWidth": 2.5,
+      "point": {
+        "filled": true,
+        "size": 65,
+        "stroke": "#F8FAFC",
+        "strokeWidth": 1
+      }
+    },
+    "encoding": {
+      "x": {
+        "field": "era",
+        "type": "ordinal",
+        "title": "Publication Era",
+        "sort": [
+          "Before 1980",
+          "1980-1999",
+          "2000-2009",
+          "2010-2019",
+          "2020 Onwards"
+        ],
+        "axis": {
+          "labelAngle": 0,
+          "labelFontSize": 12,
+          "labelColor": "#526F92"
         }
       },
-      "encoding": {
-        "x": {
-          "field": "era",
-          "type": "ordinal",
-          "title": "Publication Era",
-          "sort": [
-            "Before 1980",
-            "1980-1999",
-            "2000-2009",
-            "2010-2019",
-            "2020 Onwards"
-          ],
-          "axis": {
-            "labelAngle": 0,
-            "labelFont": "Arial",
-            "labelFontSize": 10,
-            "labelColor": "#475569",
-            "titleFont": "Arial",
-            "titleFontSize": 12,
-            "titleFontWeight": "bold",
-            "titleColor": "#17324D",
-            "labelPadding": 8,
-            "titlePadding": 12
-          }
+      "y": {
+        "field": "support_rank",
+        "type": "quantitative",
+        "title": "Support Rank",
+        "scale": {
+          "domain": [1, 8],
+          "reverse": true
         },
-        "y": {
-          "field": "support_rank",
-          "type": "quantitative",
-          "title": "Support Rank",
-          "scale": {
-            "domain": [
-              1,
-              8
-            ],
-            "reverse": true
-          },
-          "axis": {
-            "values": [
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8
-            ],
-            "format": "d",
-            "labelFont": "Arial",
-            "labelFontSize": 11,
-            "labelColor": "#475569",
-            "titleFont": "Arial",
-            "titleFontSize": 12,
-            "titleFontWeight": "bold",
-            "titleColor": "#17324D",
-            "labelPadding": 8,
-            "titlePadding": 12,
-            "gridColor": "#E2E8F0"
-          }
-        },
-        "color": {
-          "field": "player_group",
-          "type": "nominal",
-          "title": "Supported Player Count",
-          "sort": [
+        "axis": {
+          "values": [1, 2, 3, 4, 5, 6, 7, 8],
+          "format": "d"
+        }
+      },
+      "color": {
+        "field": "player_group",
+        "type": "nominal",
+        "title": "Supported Player Count",
+        "sort": [
+          "1 player",
+          "2 players",
+          "3 players",
+          "4 players",
+          "5 players",
+          "6 players",
+          "7 players",
+          "8+ players"
+        ],
+        "scale": {
+          "domain": [
             "1 player",
             "2 players",
             "3 players",
@@ -196,79 +179,128 @@
             "7 players",
             "8+ players"
           ],
-          "scale": {
-            "domain": [
-              "1 player",
-              "2 players",
-              "3 players",
-              "4 players",
-              "5 players",
-              "6 players",
-              "7 players",
-              "8+ players"
-            ],
-            "range": [
-              "#17324D",
-              "#3677A8",
-              "#75A9D4",
-              "#58A89C",
-              "#E9B44C",
-              "#64748B",
-              "#A8CCE8",
-              "#CBD5E1"
-            ]
-          },
-          "legend": {
-            "orient": "bottom",
-            "direction": "horizontal",
-            "columns": 8,
-            "titleFont": "Arial",
-            "titleFontSize": 11,
-            "titleFontWeight": "bold",
-            "titleColor": "#17324D",
-            "labelFont": "Arial",
-            "labelFontSize": 10,
-            "labelColor": "#475569",
-            "symbolStrokeWidth": 3,
-            "offset": 14
-          }
+          "range": [
+            "#17324D",
+            "#3677A8",
+            "#75A9D4",
+            "#58A89C",
+            "#E9B44C",
+            "#64748B",
+            "#A8CCE8",
+            "#CBD5E1"
+          ]
         },
-        "detail": {
-          "field": "player_group"
+        "legend": {
+          "orient": "bottom",
+          "direction": "horizontal",
+          "columns": 8
+        }
+      },
+      "detail": {
+        "field": "player_group"
+      },
+      "tooltip": [
+        {"field": "era", "title": "Publication Era"},
+        {"field": "player_group", "title": "Player Count"},
+        {
+          "field": "supporting_games",
+          "title": "Supporting Games",
+          "format": ","
         },
-        "tooltip": [
-          {
-            "field": "era",
-            "type": "nominal",
-            "title": "Publication Era"
-          },
-          {
-            "field": "player_group",
-            "type": "nominal",
-            "title": "Supported Player Count"
-          },
-          {
-            "field": "supporting_games",
-            "type": "quantitative",
-            "title": "Games Supporting This Count",
-            "format": ","
-          },
-          {
-            "field": "support_share",
-            "type": "quantitative",
-            "title": "Share of Games in Era",
-            "format": ".1%"
-          },
-          {
-            "field": "support_rank",
-            "type": "quantitative",
-            "title": "Support Rank",
-            "format": "d"
-          }
+        {
+          "field": "support_share",
+          "title": "Share",
+          "format": ".1%"
+        },
+        {
+          "field": "support_rank",
+          "title": "Rank"
+        }
+      ]
+    }
+  },
+  {
+    "transform": [
+      {
+        "filter": "datum.era === '2010-2019' && datum.player_group === '4 players' && datum.support_rank === 1"
+      }
+    ],
+    "mark": {
+      "type": "point",
+      "filled": false,
+      "size": 380,
+      "stroke": "#D19A32",
+      "strokeWidth": 3
+    },
+    "encoding": {
+      "x": {
+        "field": "era",
+        "type": "ordinal",
+        "sort": [
+          "Before 1980",
+          "1980-1999",
+          "2000-2009",
+          "2010-2019",
+          "2020 Onwards"
         ]
+      },
+      "y": {
+        "field": "support_rank",
+        "type": "quantitative",
+        "scale": {
+          "domain": [1, 8],
+          "reverse": true
+        }
       }
     }
-  ],
+  },
+  {
+    "transform": [
+      {
+        "filter": "datum.era === '2010-2019' && datum.player_group === '4 players' && datum.support_rank === 1"
+      },
+      {
+        "calculate": "'4-player games reach #1'",
+        "as": "annotation"
+      }
+    ],
+    "mark": {
+      "type": "text",
+      "align": "right",
+      "baseline": "bottom",
+      "dx": -12,
+      "dy": -13,
+      "font": "Manrope",
+      "fontSize": 13,
+      "fontWeight": "bold",
+      "color": "#B47B18"
+    },
+    "encoding": {
+      "x": {
+        "field": "era",
+        "type": "ordinal",
+        "sort": [
+          "Before 1980",
+          "1980-1999",
+          "2000-2009",
+          "2010-2019",
+          "2020 Onwards"
+        ]
+      },
+      "y": {
+        "field": "support_rank",
+        "type": "quantitative",
+        "scale": {
+          "domain": [1, 8],
+          "reverse": true
+        }
+      },
+      "text": {
+        "field": "annotation"
+      }
+    }
+  }
+],
   
 "config": {
   "font": "DM Sans",
