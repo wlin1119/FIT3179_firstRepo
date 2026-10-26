@@ -1,0 +1,317 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+"title": {
+  "text": "Which Player Counts Do Games Support?",
+  "subtitle": "Rank of supported player counts across publication eras · Rank 1 = most supported",
+  "anchor": "start",
+  "font": "Manrope",
+  "fontSize": 24,
+  "fontWeight": "bold",
+  "color": "#102A4C",
+  "subtitleFont": "DM Sans",
+  "subtitleFontSize": 14,
+  "subtitleColor": "#526F92",
+  "offset": 20
+},
+  "data": {
+    "url": "https://raw.githubusercontent.com/wlin1119/FIT3179_firstRepo/refs/heads/main/chart4_player_count.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "width": 750,
+  "height": 285,
+  "background": "#F8FAFC",
+  "padding": {
+    "left": 10,
+    "right": 15,
+    "top": 10,
+    "bottom": 5
+  },
+  "transform": [
+    {
+      "filter": "isValid(datum.min_players) && isValid(datum.max_players) && isValid(datum.era) && toNumber(datum.min_players) >= 1 && toNumber(datum.max_players) >= toNumber(datum.min_players)"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "count",
+          "field": "game_id",
+          "as": "era_total"
+        }
+      ],
+      "groupby": [
+        "era"
+      ]
+    },
+    {
+      "calculate": "sequence(toNumber(datum.min_players), toNumber(datum.max_players) + 1)",
+      "as": "supported_counts"
+    },
+    {
+      "flatten": [
+        "supported_counts"
+      ],
+      "as": [
+        "supported_player_count"
+      ]
+    },
+    {
+      "calculate": "datum.supported_player_count >= 8 ? '8+ players' : datum.supported_player_count + (datum.supported_player_count === 1 ? ' player' : ' players')",
+      "as": "player_group"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "count",
+          "as": "duplicate_rows"
+        }
+      ],
+      "groupby": [
+        "game_id",
+        "era",
+        "era_total",
+        "player_group"
+      ]
+    },
+    {
+      "aggregate": [
+        {
+          "op": "count",
+          "as": "supporting_games"
+        }
+      ],
+      "groupby": [
+        "era",
+        "era_total",
+        "player_group"
+      ]
+    },
+    {
+      "calculate": "datum.supporting_games / datum.era_total",
+      "as": "support_share"
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "support_rank"
+        }
+      ],
+      "groupby": [
+        "era"
+      ],
+      "sort": [
+        {
+          "field": "support_share",
+          "order": "descending"
+        }
+      ]
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "point": {
+          "filled": true,
+          "size": 65,
+          "stroke": "#F8FAFC",
+          "strokeWidth": 1
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "era",
+          "type": "ordinal",
+          "title": "Publication Era",
+          "sort": [
+            "Before 1980",
+            "1980-1999",
+            "2000-2009",
+            "2010-2019",
+            "2020 Onwards"
+          ],
+          "axis": {
+            "labelAngle": 0,
+            "labelFont": "Arial",
+            "labelFontSize": 10,
+            "labelColor": "#475569",
+            "titleFont": "Arial",
+            "titleFontSize": 12,
+            "titleFontWeight": "bold",
+            "titleColor": "#17324D",
+            "labelPadding": 8,
+            "titlePadding": 12
+          }
+        },
+        "y": {
+          "field": "support_rank",
+          "type": "quantitative",
+          "title": "Support Rank",
+          "scale": {
+            "domain": [
+              1,
+              8
+            ],
+            "reverse": true
+          },
+          "axis": {
+            "values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "format": "d",
+            "labelFont": "Arial",
+            "labelFontSize": 11,
+            "labelColor": "#475569",
+            "titleFont": "Arial",
+            "titleFontSize": 12,
+            "titleFontWeight": "bold",
+            "titleColor": "#17324D",
+            "labelPadding": 8,
+            "titlePadding": 12,
+            "gridColor": "#E2E8F0"
+          }
+        },
+        "color": {
+          "field": "player_group",
+          "type": "nominal",
+          "title": "Supported Player Count",
+          "sort": [
+            "1 player",
+            "2 players",
+            "3 players",
+            "4 players",
+            "5 players",
+            "6 players",
+            "7 players",
+            "8+ players"
+          ],
+          "scale": {
+            "domain": [
+              "1 player",
+              "2 players",
+              "3 players",
+              "4 players",
+              "5 players",
+              "6 players",
+              "7 players",
+              "8+ players"
+            ],
+            "range": [
+              "#17324D",
+              "#3677A8",
+              "#75A9D4",
+              "#58A89C",
+              "#E9B44C",
+              "#64748B",
+              "#A8CCE8",
+              "#CBD5E1"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 8,
+            "titleFont": "Arial",
+            "titleFontSize": 11,
+            "titleFontWeight": "bold",
+            "titleColor": "#17324D",
+            "labelFont": "Arial",
+            "labelFontSize": 10,
+            "labelColor": "#475569",
+            "symbolStrokeWidth": 3,
+            "offset": 14
+          }
+        },
+        "detail": {
+          "field": "player_group"
+        },
+        "tooltip": [
+          {
+            "field": "era",
+            "type": "nominal",
+            "title": "Publication Era"
+          },
+          {
+            "field": "player_group",
+            "type": "nominal",
+            "title": "Supported Player Count"
+          },
+          {
+            "field": "supporting_games",
+            "type": "quantitative",
+            "title": "Games Supporting This Count",
+            "format": ","
+          },
+          {
+            "field": "support_share",
+            "type": "quantitative",
+            "title": "Share of Games in Era",
+            "format": ".1%"
+          },
+          {
+            "field": "support_rank",
+            "type": "quantitative",
+            "title": "Support Rank",
+            "format": "d"
+          }
+        ]
+      }
+    }
+  ],
+  
+"config": {
+  "font": "DM Sans",
+
+  "view": {
+    "stroke": null
+  },
+
+  "axis": {
+    "labelFont": "DM Sans",
+    "labelFontSize": 14,
+    "labelColor": "#526F92",
+    "labelPadding": 10,
+
+    "titleFont": "Manrope",
+    "titleFontSize": 16,
+    "titleFontWeight": 600,
+    "titleColor": "#17324D",
+    "titlePadding": 16,
+
+    "domainColor": "#CBD5E1",
+    "tickColor": "#CBD5E1",
+    "gridColor": "#EAF3FB"
+  },
+
+  "legend": {
+    "orient": "bottom",
+    "direction": "horizontal",
+
+    "titleFont": "Manrope",
+    "titleFontSize": 15,
+    "titleFontWeight": 600,
+    "titleColor": "#17324D",
+
+    "labelFont": "DM Sans",
+    "labelFontSize": 13,
+    "labelColor": "#526F92",
+
+    "symbolSize": 110,
+    "columnPadding": 18,
+    "rowPadding": 10,
+    "offset": 20
+  }
+}
+
+}

@@ -1,0 +1,281 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#FFFFFF",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/wlin1119/FIT3179_firstRepo/refs/heads/main/chart1_release_year.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+
+  "transform": [
+    {
+      "filter": "isValid(datum.year_published) && isValid(datum.games_released)"
+    }
+  ],
+
+  "params": [
+    {
+      "name": "brush",
+      "select": {
+        "type": "interval",
+        "encodings": ["x"],
+        "clear": "dblclick"
+      },
+      "views": ["view_overview"]
+    }
+  ],
+
+  "vconcat": [
+    {
+      "title": {
+        "text": "Games Released by Year",
+        "subtitle": "Drag the overview below to explore a selected period",
+        "anchor": "start",
+        "font": "Manrope",
+        "fontSize": 24,
+        "fontWeight": "bold",
+        "color": "#102A4C",
+        "subtitleFont": "DM Sans",
+        "subtitleFontSize": 14,
+        "subtitleColor": "#526F92",
+        "offset": 20
+      },
+
+      "width": 900,
+      "height": 341,
+
+      "transform": [
+        {
+          "filter": {
+            "param": "brush"
+          }
+        }
+      ],
+
+      "layer": [
+        {
+          "mark": {
+            "type": "line",
+            "color": "#2878B9",
+            "strokeWidth": 3,
+            "point": {
+              "filled": true,
+              "fill": "#2878B9",
+              "size": 45
+            }
+          },
+
+          "encoding": {
+            "x": {
+              "field": "year_published",
+              "type": "quantitative",
+              "title": "Year Published",
+              "axis": {
+                "format": "d",
+                "tickCount": 8
+              }
+            },
+
+            "y": {
+              "field": "games_released",
+              "type": "quantitative",
+              "title": "Number of Games Released",
+              "scale": {
+                "zero": true
+              }
+            },
+
+            "tooltip": [
+              {
+                "field": "year_published",
+                "type": "quantitative",
+                "title": "Year",
+                "format": "d"
+              },
+              {
+                "field": "games_released",
+                "type": "quantitative",
+                "title": "Games Released",
+                "format": ",d"
+              }
+            ]
+          }
+        },
+
+        {
+          "transform": [
+            {
+              "filter": "datum.year_published == 2015"
+            }
+          ],
+
+          "mark": {
+            "type": "point",
+            "filled": true,
+            "color": "#D19A32",
+            "size": 160
+          },
+
+          "encoding": {
+            "x": {
+              "field": "year_published",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "games_released",
+              "type": "quantitative"
+            }
+          }
+        },
+
+        {
+          "transform": [
+            {
+              "filter": "datum.year_published == 2015"
+            }
+          ],
+
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "bottom",
+            "dx": -12,
+            "dy": -12,
+            "font": "DM Sans",
+            "fontSize": 15,
+            "fontWeight": "bold",
+            "color": "#D19A32"
+          },
+
+          "encoding": {
+            "x": {
+              "field": "year_published",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "games_released",
+              "type": "quantitative"
+            },
+            "text": {
+              "value": "2015 peak: 733 games"
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "view_overview",
+
+      "title": {
+        "text": "Select a Range of Years",
+        "anchor": "start",
+        "font": "Manrope",
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "color": "#102A4C",
+        "offset": 12
+      },
+
+      "width": 900,
+      "height": 95,
+
+      "mark": {
+        "type": "area",
+        "color": "#A8CCE8",
+        "opacity": 0.85,
+        "line": {
+          "color": "#2878B9",
+          "strokeWidth": 1.5
+        }
+      },
+
+      "encoding": {
+        "x": {
+          "field": "year_published",
+          "type": "quantitative",
+          "title": "Year Published",
+          "axis": {
+            "format": "d",
+            "tickCount": 10
+          }
+        },
+
+        "y": {
+          "field": "games_released",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "labels": false,
+            "ticks": false,
+            "domain": false
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "year_published",
+            "type": "quantitative",
+            "title": "Year",
+            "format": "d"
+          },
+          {
+            "field": "games_released",
+            "type": "quantitative",
+            "title": "Games Released",
+            "format": ",d"
+          }
+        ]
+      }
+    }
+  ],
+
+  "spacing": 32,
+
+  "config": {
+    "font": "DM Sans",
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "labelFont": "DM Sans",
+      "labelFontSize": 14,
+      "labelColor": "#526F92",
+      "labelPadding": 8,
+
+      "titleFont": "Manrope",
+      "titleFontSize": 16,
+      "titleFontWeight": 600,
+      "titleColor": "#17324D",
+      "titlePadding": 15,
+
+      "domainColor": "#CBD5E1",
+      "tickColor": "#CBD5E1",
+
+      "gridColor": "#EAF3FB",
+      "gridOpacity": 1
+    },
+
+    "title": {
+      "font": "Manrope",
+      "fontSize": 24,
+      "fontWeight": "bold",
+      "color": "#102A4C"
+    },
+
+    "legend": {
+      "labelFont": "DM Sans",
+      "labelFontSize": 14,
+      "labelColor": "#526F92",
+
+      "titleFont": "Manrope",
+      "titleFontSize": 16,
+      "titleColor": "#17324D"
+    }
+  }
+}

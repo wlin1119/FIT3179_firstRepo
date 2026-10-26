@@ -1,0 +1,136 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+"title": {
+  "text": "How Old Are Board Games Designed For?",
+  "subtitle": "Recommended minimum age across different eras of board-game publishing",
+  "anchor": "start",
+  "font": "Manrope",
+  "fontSize": 24,
+  "fontWeight": "bold",
+  "color": "#17324D",
+  "subtitleFont": "DM Sans",
+  "subtitleFontSize": 14,
+  "subtitleColor": "#64748B",
+  "offset": 20
+},
+
+  "width": 750,
+  "height": 330,
+  "background": "#F8FAFC",
+  "data": {
+    "url": "https://raw.githubusercontent.com/wlin1119/FIT3179_firstRepo/refs/heads/main/chart5_min_age.csv"
+  },
+  "transform": [
+    {
+      "filter": "isValid(datum.min_age) && isValid(datum.era) && toNumber(datum.min_age) > 0 && toNumber(datum.min_age) != 42"
+    },
+    {
+      "calculate": "toNumber(datum.min_age)",
+      "as": "age"
+    }
+  ],
+  "mark": {
+    "type": "boxplot",
+    "extent": 1.5,
+    "size": 28
+  },
+  "encoding": {
+    "y": {
+      "field": "era",
+      "type": "ordinal",
+      "title": "Publication Era",
+      "sort": [
+        "Before 1980",
+        "1980-1999",
+        "2000-2009",
+        "2010-2019",
+        "2020 Onwards"
+      ],
+      
+"axis": {
+  "labelFont": "DM Sans",
+  "labelFontSize": 14,
+  "labelColor": "#526F92",
+  "labelPadding": 10,
+
+  "titleFont": "Manrope",
+  "titleFontSize": 16,
+  "titleFontWeight": 600,
+  "titleColor": "#17324D",
+  "titlePadding": 16,
+
+  "labelLimit": 140,
+  "grid": false,
+  "domainColor": "#CBD5E1",
+  "tickColor": "#CBD5E1"
+}
+
+    },
+    "x": {
+      "field": "age",
+      "type": "quantitative",
+      "title": "Recommended Minimum Age (years)",
+      
+"axis": {
+  "labelFont": "DM Sans",
+  "labelFontSize": 14,
+  "labelColor": "#526F92",
+  "labelPadding": 10,
+
+  "titleFont": "Manrope",
+  "titleFontSize": 16,
+  "titleFontWeight": 600,
+  "titleColor": "#17324D",
+  "titlePadding": 16,
+
+  "grid": true,
+  "gridColor": "#E2E8F0",
+  "domain": false,
+  "tickColor": "#CBD5E1"
+}
+
+    },
+    "color": {
+      "value": "#75A9D4"
+    },
+    "tooltip": [
+      {
+        "field": "era",
+        "type": "nominal",
+        "title": "Publication Era"
+      },
+      {
+        "field": "age",
+        "type": "quantitative",
+        "title": "Recommended Minimum Age",
+        "format": ".0f"
+      }
+    ]
+  },
+  "config": {
+    "boxplot": {
+      "median": {
+        "color": "#17324D",
+        "strokeWidth": 3
+      },
+      "box": {
+        "fill": "#75A9D4",
+        "fillOpacity": 0.7,
+        "stroke": "#3677A8"
+      },
+      "rule": {
+        "stroke": "#3677A8",
+        "strokeWidth": 1
+      },
+      "ticks": {
+        "stroke": "#3677A8",
+        "strokeWidth": 1
+      }
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}
