@@ -1,0 +1,502 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Interactive world map of board-game cafes with zoom, pan, and reset controls.",
+  
+"title": {
+  "text": "Where in the World Are Board-Game Cafés?",
+  "subtitle": "Recorded café counts by country · Larger circles represent more cafés",
+  "anchor": "start",
+  "font": "Manrope",
+  "fontSize": 24,
+  "fontWeight": "bold",
+  "color": "#17324D",
+  "subtitleFont": "DM Sans",
+  "subtitleFontSize": 14,
+  "subtitleColor": "#64748B",
+  "offset": 20
+},
+
+  "width": 850,
+  "height": 380,
+  "padding": {
+    "top": 15,
+    "left": 15,
+    "right": 15,
+    "bottom": 20
+  },
+  "autosize": {
+  "type": "pad",
+  "contains": "padding"
+},
+  "background": "#FFFFFF",
+
+  "signals": [
+    {
+      "name": "tx",
+      "update": "width / 2"
+    },
+    {
+      "name": "ty",
+      "update": "height / 2"
+    },
+    {
+      "name": "mapScale",
+      "value": 150,
+      "on": [
+        {
+          "events": {
+            "type": "wheel",
+            "consume": true
+          },
+          "update": "clamp(mapScale * pow(1.0015, -event.deltaY * pow(16, event.deltaMode)), 100, 2500)"
+        },
+        {
+          "events": "@zoomIn:click",
+          "update": "clamp(mapScale * 1.4, 100, 2500)"
+        },
+        {
+          "events": "@zoomOut:click",
+          "update": "clamp(mapScale / 1.4, 100, 2500)"
+        },
+        {
+          "events": "@resetMap:click",
+          "update": "150"
+        }
+      ]
+    },
+    {
+      "name": "angles",
+      "value": [0, 0],
+      "on": [
+        {
+          "events": "pointerdown",
+          "update": "[rotateX, centerY]"
+        },
+        {
+          "events": "@resetMap:click",
+          "update": "[0, 0]"
+        }
+      ]
+    },
+    {
+      "name": "clonedProjection",
+      "value": null,
+      "on": [
+        {
+          "events": "pointerdown",
+          "update": "copy('projection')"
+        }
+      ]
+    },
+    {
+      "name": "dragStart",
+      "value": null,
+      "on": [
+        {
+          "events": "pointerdown",
+          "update": "invert(clonedProjection, xy())"
+        }
+      ]
+    },
+    {
+      "name": "dragPosition",
+      "value": null,
+      "on": [
+        {
+          "events": "[pointerdown, window:pointerup] > window:pointermove",
+          "update": "invert(clonedProjection, xy())"
+        }
+      ]
+    },
+    {
+      "name": "dragDelta",
+      "value": null,
+      "on": [
+        {
+          "events": {
+            "signal": "dragPosition"
+          },
+          "update": "[dragPosition[0] - dragStart[0], startY - dragPosition[1]]"
+        }
+      ]
+    },
+    {
+      "name": "startY",
+      "value": 0,
+      "on": [
+        {
+          "events": "pointerdown",
+          "update": "invert(clonedProjection, xy())[1]"
+        }
+      ]
+    },
+    {
+      "name": "rotateX",
+      "value": 0,
+      "on": [
+        {
+          "events": {
+            "signal": "dragDelta"
+          },
+          "update": "angles[0] + dragDelta[0]"
+        },
+        {
+          "events": "@resetMap:click",
+          "update": "0"
+        }
+      ]
+    },
+    {
+      "name": "centerY",
+      "value": 0,
+      "on": [
+        {
+          "events": {
+            "signal": "dragDelta"
+          },
+          "update": "clamp(angles[1] + dragDelta[1], -60, 60)"
+        },
+        {
+          "events": "@resetMap:click",
+          "update": "0"
+        }
+      ]
+    }
+  ],
+  "projections": [
+    {
+      "name": "projection",
+      "type": "equalEarth",
+      "scale": {
+        "signal": "mapScale"
+      },
+      "rotate": [
+        {
+          "signal": "rotateX"
+        },
+        0,
+        0
+      ],
+      "center": [
+        0,
+        {
+          "signal": "centerY"
+        }
+      ],
+      "translate": [
+        {
+          "signal": "tx"
+        },
+        {
+          "signal": "ty"
+        }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "world",
+      "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_admin_0_countries"
+      }
+    },
+    {
+      "name": "cafes",
+      "url": "https://raw.githubusercontent.com/wlin1119/FIT3179_firstRepo/refs/heads/main/chart9_cafe_count_by_country_with_coords.csv",
+      "format": {
+        "type": "csv"
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "toNumber(datum.cafe_count)",
+          "as": "cafes"
+        },
+        {
+          "type": "formula",
+          "expr": "toNumber(datum.latitude)",
+          "as": "lat"
+        },
+        {
+          "type": "formula",
+          "expr": "toNumber(datum.longitude)",
+          "as": "lon"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum.lat) && isValid(datum.lon) && isValid(datum.cafes) && datum.cafes > 0"
+        },
+        {
+          "type": "geopoint",
+          "projection": "projection",
+          "fields": ["lon", "lat"],
+          "as": ["x", "y"]
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "cafeSize",
+      "type": "sqrt",
+      "domain": [1, 249],
+      "range": [25, 1000],
+      "clamp": true
+    }
+  ],
+  "legends": [
+    {
+      "size": "cafeSize",
+      "title": "Recorded cafés",
+      "orient": "bottom",
+      "direction": "horizontal",
+      "values": [1, 25, 100, 249],
+      "titleFont": "Manrope",
+      "titleFontSize": 13,
+      "titleColor": "#102A4C",
+      "labelFont": "DM Sans",
+      "labelFontSize": 12,
+      "labelColor": "#526F92",
+      "symbolFillColor": "#2878B9",
+      "symbolStrokeColor": "#102A4C",
+      "offset": 15
+    }
+  ],
+  "marks": [
+    {
+      "type": "shape",
+      "name": "countryShapes",
+      "from": {
+        "data": "world"
+      },
+      "transform": [
+        {
+          "type": "geoshape",
+          "projection": "projection"
+        }
+      ],
+      "encode": {
+        "enter": {
+          "fill": {
+            "value": "#EAF3FB"
+          },
+          "stroke": {
+            "value": "#FFFFFF"
+          },
+          "strokeWidth": {
+            "value": 0.7
+          }
+        },
+        "update": {
+          "fill": {
+            "value": "#EAF3FB"
+          }
+        },
+        "hover": {
+          "fill": {
+            "value": "#D3E7F7"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "name": "cafePoints",
+      "from": {
+        "data": "cafes"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "size": {
+            "scale": "cafeSize",
+            "field": "cafes"
+          },
+          "fill": {
+            "value": "#2878B9"
+          },
+          "fillOpacity": {
+            "value": 0.75
+          },
+          "stroke": {
+            "value": "#102A4C"
+          },
+          "strokeWidth": {
+            "value": 0.8
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "tooltip": {
+            "signal": "{'Country': datum.country, 'Recorded cafés': format(datum.cafes, ',.0f')}"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "size": {
+            "scale": "cafeSize",
+            "field": "cafes"
+          }
+        },
+        "hover": {
+          "fillOpacity": {
+            "value": 1
+          },
+          "strokeWidth": {
+            "value": 2
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "zoomIn",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 785
+          },
+          "y": {
+            "value": -65
+          },
+          "text": {
+            "value": "+"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontSize": {
+            "value": 22
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fill": {
+            "value": "#102A4C"
+          },
+          "cursor": {
+            "value": "pointer"
+          }
+        },
+        "update": {
+          "fill": {
+            "value": "#102A4C"
+          }
+        },
+        "hover": {
+          "fill": {
+            "value": "#2878B9"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "zoomOut",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 810
+          },
+          "y": {
+            "value": -65
+          },
+          "text": {
+            "value": "−"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontSize": {
+            "value": 22
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fill": {
+            "value": "#102A4C"
+          },
+          "cursor": {
+            "value": "pointer"
+          }
+        },
+        "hover": {
+          "fill": {
+            "value": "#2878B9"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "resetMap",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 755
+          },
+          "y": {
+            "value": -65
+          },
+          "text": {
+            "value": "Reset"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fill": {
+            "value": "#526F92"
+          },
+          "cursor": {
+            "value": "pointer"
+          }
+        },
+        "hover": {
+          "fill": {
+            "value": "#2878B9"
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "DM Sans"
+  }
+}

@@ -1,0 +1,403 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Interactive Kickstarter funding choropleth map with zoom, pan, reset, selection and funding filters.",
+  "width": 700,
+  "height": 360,
+  "padding": {
+    "top": 15,
+    "left": 15,
+    "right": 15,
+    "bottom": 20
+  },
+  "autosize": {
+    "type": "pad",
+    "contains": "padding"
+  },
+  "background": "#F8FAFC",
+
+  "title": {
+    "text": "Where Is Board-Game Crowdfunding Strongest?",
+    "subtitle": "Total Kickstarter funding by project country (USD)",
+    "anchor": "start",
+    "font": "Manrope",
+    "fontSize": 24,
+    "fontWeight": "bold",
+    "color": "#17324D",
+    "subtitleFont": "DM Sans",
+    "subtitleFontSize": 14,
+    "subtitleColor": "#64748B",
+    "offset": 20
+  },
+
+  "signals": [
+    {
+      "name": "minimumFunding",
+      "value": 0,
+      "bind": {
+        "input": "select",
+        "name": "Minimum funding: ",
+        "options": [0, 10000, 100000, 1000000, 10000000],
+        "labels": [
+          "All countries",
+          "$10K+",
+          "$100K+",
+          "$1M+",
+          "$10M+"
+        ]
+      }
+    },
+    {
+      "name": "mapScale",
+      "value": 120,
+      "on": [
+        {
+          "events": {
+            "type": "wheel",
+            "consume": true
+          },
+          "update": "clamp(mapScale * pow(1.0015, -event.deltaY * pow(16, event.deltaMode)), 100, 2500)"
+        },
+        {
+          "events": "@zoomIn:click",
+          "update": "clamp(mapScale * 1.4, 100, 2500)"
+        },
+        {
+          "events": "@zoomOut:click",
+          "update": "clamp(mapScale / 1.4, 100, 2500)"
+        },
+        {
+          "events": "@resetMap:click",
+          "update": "120"
+        }
+      ]
+    },
+    {
+      "name": "dragStart",
+      "value": null,
+      "on": [
+        {
+          "events": "pointerdown",
+          "update": "xy()"
+        },
+        {
+          "events": "window:pointerup",
+          "update": "null"
+        },
+        {
+          "events": "@resetMap:click",
+          "update": "null"
+        }
+      ]
+    },
+    {
+      "name": "dragOffset",
+      "value": [0, 0],
+      "on": [
+        {
+          "events": "pointerdown",
+          "update": "mapOffset"
+        },
+        {
+          "events": "@resetMap:click",
+          "update": "[0, 0]"
+        }
+      ]
+    },
+    {
+      "name": "mapOffset",
+      "value": [0, 0],
+      "on": [
+        {
+          "events": "window:pointermove",
+          "update": "dragStart ? [dragOffset[0] + xy()[0] - dragStart[0], dragOffset[1] + xy()[1] - dragStart[1]] : mapOffset"
+        },
+        {
+          "events": "@resetMap:click",
+          "update": "[0, 0]"
+        }
+      ]
+    },
+    
+{
+  "name": "selectedId",
+  "value": null,
+  "on": [
+    {
+      "events": "@countries:click",
+      "update": "selectedId === datum.properties.ADMIN ? null : datum.properties.ADMIN"
+    },
+    {
+      "events": "view:dblclick",
+      "update": "null"
+    }
+  ]
+},
+{
+  "name": "hoveredId",
+  "value": null,
+  "on": [
+    {
+      "events": "@countries:pointerover",
+      "update": "datum.properties.ADMIN"
+    },
+    {
+      "events": "@countries:pointerout",
+      "update": "null"
+    }
+  ]
+}
+
+  ],
+
+  "data": [
+    {
+      "name": "funding",
+      "url": "https://raw.githubusercontent.com/wlin1119/FIT3179_firstRepo/refs/heads/main/chart10_funding_by_country.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "total_funding_usd": "number",
+          "longitude": "number",
+          "latitude": "number"
+        }
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "as": "country_id",
+          "expr": "datum.country === 'US' ? 840 : datum.country === 'GB' ? 826 : datum.country === 'CA' ? 124 : datum.country === 'FR' ? 250 : datum.country === 'AU' ? 36 : datum.country === 'SE' ? 752 : datum.country === 'NL' ? 528 : datum.country === 'ES' ? 724 : datum.country === 'DE' ? 276 : datum.country === 'NZ' ? 554 : datum.country === 'IT' ? 380 : datum.country === 'NO' ? 578 : datum.country === 'IE' ? 372 : datum.country === 'BE' ? 56 : datum.country === 'CH' ? 756 : datum.country === 'DK' ? 208 : datum.country === 'HK' ? 344 : datum.country === 'AT' ? 40 : datum.country === 'SG' ? 702 : datum.country === 'MX' ? 484 : null"
+        }
+      ]
+    },
+    {
+      "name": "countryNames",
+      "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.tsv",
+      "format": {
+        "type": "tsv",
+        "parse": {
+          "id": "number"
+        }
+      }
+    },
+    
+{
+  "name": "world",
+  "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
+  "format": {
+    "type": "topojson",
+    "feature": "ne_110m_admin_0_countries"
+  },
+  "transform": [
+    {
+      "type": "formula",
+      "as": "numeric_id",
+      "expr": "toNumber(datum.properties.ISO_N3)"
+    },
+    {
+      "type": "formula",
+      "as": "country_name",
+      "expr": "datum.properties.ADMIN"
+    },
+    {
+      "type": "lookup",
+      "from": "funding",
+      "key": "country_id",
+      "fields": ["numeric_id"],
+      "values": ["country", "total_funding_usd"],
+      "as": ["country_code", "funding_value"]
+    },
+    {
+      "type": "formula",
+      "as": "hasFunding",
+      "expr": "isValid(datum.funding_value) && datum.funding_value > 0"
+    },
+    {
+      "type": "formula",
+      "as": "passesFilter",
+      "expr": "datum.hasFunding && datum.funding_value >= minimumFunding"
+    },
+    {
+      "type": "formula",
+      "as": "funding_label",
+      "expr": "!datum.hasFunding ? 'No recorded data' : datum.funding_value < minimumFunding ? 'Below selected threshold' : format(datum.funding_value, '$,.2f')"
+    }
+  ]
+}
+
+  ],
+
+  "projections": [
+    {
+      "name": "worldProjection",
+      "type": "equalEarth",
+      "scale": {
+        "signal": "mapScale"
+      },
+      "translate": {
+        "signal": "[width / 2 + mapOffset[0], height / 2 + mapOffset[1]]"
+      }
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "fundingColor",
+      "type": "log",
+      "domain": [2907.38, 254337975.30],
+      "range": [
+        "#DCECF7",
+        "#A8CCE8",
+        "#73A9D1",
+        "#3677A8",
+        "#21547E",
+        "#102A4C"
+      ],
+      "clamp": true
+    }
+  ],
+
+  "marks": [
+    {
+      "name": "countries",
+      "type": "shape",
+      "from": {
+        "data": "world"
+      },
+      "clip": true,
+      "encode": {
+        "enter": {
+          "cursor": {
+            "value": "pointer"
+          }
+        },
+        "update": {
+          "fill": {
+            "signal": "datum.passesFilter ? scale('fundingColor', datum.funding_value) : '#E5E7EB'"
+          },
+          "fillOpacity": {
+            "signal": "selectedId === null || selectedId === datum.id ? 1 : 0.3"
+          },
+          "stroke": {
+            "signal": "hoveredId === datum.id || selectedId === datum.id ? '#D19A32' : '#FFFFFF'"
+          },
+          "strokeWidth": {
+            "signal": "hoveredId === datum.id ? 2.5 : selectedId === datum.id ? 2 : 0.6"
+          },
+          "tooltip": {
+            "signal": "{'Country': datum.country_name || 'Unknown', 'Total funding': datum.funding_label}"
+          },
+          "zindex": {
+            "signal": "hoveredId === datum.id ? 2 : selectedId === datum.id ? 1 : 0"
+          }
+        }
+      },
+      "transform": [
+        {
+          "type": "geoshape",
+          "projection": "worldProjection"
+        }
+      ]
+    },
+
+    {
+      "type": "text",
+      "name": "resetMap",
+      "encode": {
+        "enter": {
+          "x": {"signal": "width - 90"},
+          "y": {"value": 20},
+          "text": {"value": "Reset"},
+          "font": {"value": "DM Sans"},
+          "fontSize": {"value": 13},
+          "fontWeight": {"value": "bold"},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "fill": {"value": "#526F92"},
+          "cursor": {"value": "pointer"}
+        },
+        "hover": {
+          "fill": {"value": "#2878B9"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "zoomIn",
+      "encode": {
+        "enter": {
+          "x": {"signal": "width - 48"},
+          "y": {"value": 20},
+          "text": {"value": "+"},
+          "font": {"value": "DM Sans"},
+          "fontSize": {"value": 22},
+          "fontWeight": {"value": "bold"},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "fill": {"value": "#102A4C"},
+          "cursor": {"value": "pointer"}
+        },
+        "hover": {
+          "fill": {"value": "#2878B9"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "zoomOut",
+      "encode": {
+        "enter": {
+          "x": {"signal": "width - 20"},
+          "y": {"value": 20},
+          "text": {"value": "−"},
+          "font": {"value": "DM Sans"},
+          "fontSize": {"value": 22},
+          "fontWeight": {"value": "bold"},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "fill": {"value": "#102A4C"},
+          "cursor": {"value": "pointer"}
+        },
+        "hover": {
+          "fill": {"value": "#2878B9"}
+        }
+      }
+    }
+  ],
+
+  "legends": [
+    {
+      "fill": "fundingColor",
+      "type": "gradient",
+      "title": "Total funding (USD)",
+      "orient": "bottom",
+      "direction": "horizontal",
+      "gradientLength": 370,
+      "gradientThickness": 14,
+      "format": "$~s",
+      "values": [
+        3000,
+        10000,
+        100000,
+        1000000,
+        10000000,
+        100000000
+      ],
+      "titleFont": "Manrope",
+      "titleFontSize": 15,
+      "titleFontWeight": "bold",
+      "titleColor": "#102A4C",
+      "labelFont": "DM Sans",
+      "labelFontSize": 13,
+      "labelColor": "#526F92",
+      "offset": 20
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "DM Sans"
+  }
+}
