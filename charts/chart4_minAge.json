@@ -16,7 +16,7 @@
 },
 
   "width": 750,
-  "height": 330,
+  "height": 295,
   "background": "#F8FAFC",
   "data": {
     "url": "https://raw.githubusercontent.com/wlin1119/FIT3179_firstRepo/refs/heads/main/chart5_min_age.csv"
