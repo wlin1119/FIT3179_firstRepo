@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +16,11 @@
 
   <script src="main.js" defer></script>
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
 </head>
 
@@ -36,11 +38,6 @@
         <div class="hero-text">
           <h1>The Board-Game Boom</h1>
 
-          <p class="hero-description">
-            Every board game begins with an idea. Across the years,
-            thousands of games have been published, each adding
-            something new to the tabletop experience.
-          </p>
         </div>
 
         <div class="hero-symbol" aria-hidden="true">
@@ -81,284 +78,1115 @@
     </div>
 
     <!-- CHART 1 -->
+
+    <section id="publication-timeline" class="chart-card">
+      <div class="chart-heading">
+        <div class="chart-icon" aria-hidden="true">↗</div>
+        <div>
+          <h2>Publication Timeline</h2>
+          <p>How has the number of recorded board-game releases changed over time?</p>
+        </div>
+      </div>
+
+      <div class="chart-insight-layout">
+
+        <!-- LEFT: VEGA-LITE CHART -->
+        <div class="chart-frame">
+          <div id="chart1" class="vega-chart"></div>
+
+          <p class="chart-source">
+  Data source:
+  <a href="https://www.kaggle.com/datasets/sujaykapadnis/board-games"
+     target="_blank"
+     rel="noopener noreferrer">
+    Sujay Kapadnis (BoardGameGeek), October 2023
+  </a>
+</p>
+        </div>
+
+        
+
+
+
+        <!-- RIGHT: OBSERVATION AND INSIGHT -->
+        <aside class="insight-sidebar">
+          <article class="side-insight">
+            <span class="side-label">OBSERVATION</span>
+            <h3>Patterns over time</h3>
+            <p>
+             Board-game publishing grew slowly for decades, with fewer than 100 recorded releases per year throughout the 1980s. 
+             The pace began to accelerate in the 1990s, reaching 201 releases in 1999. By 2015, that number had surged to 733 games, 
+             the highest point in the dataset — more than three times the 1999 total.
+            </p>
+          </article>
+
+          <article class="side-insight highlight-insight">
+            <span class="side-label">WHY IT MATTERS</span>
+            <h3>More Games, More Ways to Play</h3>
+            <p>
+              This rise marks a major expansion in the variety
+              of board games available to players. As more titles
+              entered the market, players gained more choices
+              beyond traditional favourites. But did this growth
+              simply produce more games, or did it also change
+              how games are played? 
+            </p>
+          </article>
+
+        </aside>
+      </div>
+    </section>
+
+
+    <!-- SECTION 02: WHAT MAKES A MODERN BOARD GAME? -->
+    <section id="section-02" class="story-section">
+
+      <header class="section-hero">
+        <div class="chapter-label">
+          <span class="chapter-line"></span>
+          <span>CHAPTER 02</span>
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>What Makes a Modern Board Game?</h1>
+            
+          </div>
+
+          <div class="hero-symbol" aria-hidden="true">
+            <span>◷</span>
+            <span>♟</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- SECTION INTRODUCTION -->
+      <div class="intro-grid">
+
+        <article class="intro-card journey-card">
+          <div class="card-label">THE INVESTIGATION</div>
+          <h2>Inside the Playing Experience</h2>
+          <p>
+            Compare playing-time ranges across publication eras
+            to explore how the expected length of a game varies.
+          </p>
+          <a href="#playing-time-chart" class="text-link">
+            Explore the data <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="intro-card question-card">
+          <div class="card-label gold-text">THE BIG QUESTION</div>
+          <h2>How long is a typical game?</h2>
+          <p>
+            Do newer games tend to offer shorter sessions,
+            longer strategic experiences, or a mix of both?
+          </p>
+          <span class="question-note">
+            ✦ Compare the playing-time distribution
+          </span>
+        </article>
+
+      </div>
+
+      <!-- CHART 2: PLAYING TIME HEATMAP -->
+      <article id="playing-time-chart" class="chart-card">
+
+        <div class="chart-heading">
+          <div class="chart-icon" aria-hidden="true">◷</div>
+          <div>
+            <h2>Playing Time Across the Years</h2>
+            <p>
+              How the share of games in each playing-time range
+              differs across publication eras.
+            </p>
+          </div>
+        </div>
+
+        <div class="chart-insight-layout">
+
+          <!-- LEFT: CHART -->
+          <div class="chart-frame">
+            <div id="chart2" class="vega-chart"></div>
+             <p class="chart-source">
+  Data source:
+  <a href="https://www.kaggle.com/datasets/sujaykapadnis/board-games"
+     target="_blank"
+     rel="noopener noreferrer">
+    Sujay Kapadnis (BoardGameGeek), October 2023
+  </a>
+</p>
+          </div>
+
+          <!-- RIGHT: OBSERVATION AND INSIGHT -->
+          <aside class="insight-sidebar">
+
+            <article class="side-insight">
+              <span class="side-label">OBSERVATION</span>
+              <h3>Different eras, different playtimes</h3>
+              <p>
+                The heatmap compares how playing times are distributed across five generations of board games. 
+                The key pattern to examine is the concentration of games in the shorter playing-time categories, 
+                particularly 0–30 minutes and 31–60 minutes, compared with games lasting more than two hours. 
+                Differences in colour intensity between eras reveal how the balance of shorter and longer games has changed over time.
+
+              </p>
+            </article>
+
+            <article class="side-insight highlight-insight">
+              <span class="side-label">WHY IT MATTERS</span>
+              <h3>The experience matters</h3>
+              <p>
+                Playing time shapes the gaming experience. 
+                Shorter games suit casual gatherings, while longer games offer deeper strategic play. 
+                These patterns reveal how time commitments have evolved across generations of board games. 
+              </p>
+            </article>
+
+          </aside>
+        </div>
+
+
+      </article>
+
+
+<!-- TRANSITION: CHART 2 TO CHART 3 -->
+<div class="chart-transition">
+  <h3>How Many Players Can Join the Game?</h3>
+  <p>
+    Beyond playing time, player counts shape
+    the social experience of board games.
+  </p>
+</div>
+
+
+
+    </section>
+
+
+
+    <!-- CHART 3: PLAYER COUNT -->
+    <section id="player-count" class="feature-section">
+
+      <div class="split-chart-card">
+        <aside class="split-chart-info">
+          
+          <h3>Who Gets a Seat at the Table?</h3>
+          <p>
+           A board game may fit your schedule, but does it
+          fit your group? From two-player duels to larger
+          gatherings, the number of supported players
+          shapes how people experience a game.
+          </p>
+
+          <div class="reading-note">
+            <strong>OBSERVATION</strong>
+            <p>
+              Two-player games held the top rank from before 1980 through 2009, but four-player games overtook them in 2010–2019, 
+              rising from third to first place. Meanwhile, three-player games remained consistently popular, 
+              and five-player games stayed at fourth place across all eras. This suggests a shift towards games accommodating slightly larger groups.
+            </p>
+          </div>
+
+        </aside>
+
+        <div class="split-chart-visual">
+          <div id="chart3" class="vega-chart"></div>
+           <p class="chart-source">
+  Data source:
+  <a href="https://www.kaggle.com/datasets/sujaykapadnis/board-games"
+     target="_blank"
+     rel="noopener noreferrer">
+    Sujay Kapadnis (BoardGameGeek), October 2023
+  </a>
+</p>
+        </div>
+      </div>
+    </section>
+
     
-<section id="publication-timeline" class="chart-card">
-  <div class="chart-heading">
-    <div class="chart-icon" aria-hidden="true">↗</div>
-    <div>
-      <h2>Publication Timeline</h2>
-      <p>When did board games take off?</p>
-    </div>
-  </div>
 
-  <div class="chart-insight-layout">
+<!-- TRANSITION TO CHART 4 -->
 
-    <!-- LEFT: VEGA-LITE CHART -->
-    <div class="chart-frame">
-      <div id="chart1" class="vega-chart"></div>
-    </div>
+<!-- TRANSITION: CHART 3 TO CHART 4 -->
+<div class="chart-transition">
+  <h3>Who Are Board Games Designed For?</h3>
+  <p>
+    Beyond player counts, recommended ages reveal
+    who can join the game.
+  </p>
+</div>
 
-    <!-- RIGHT: OBSERVATION AND INSIGHT -->
-    <aside class="insight-sidebar">
-      <article class="side-insight">
-        <span class="side-label">OBSERVATION</span>
-        <h3>Patterns over time</h3>
-        <p>
-          Look for periods when the number of recorded
-          game releases increases or decreases.
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-        </p>
-      </article>
-
-      <article class="side-insight highlight-insight">
-        <span class="side-label">WHY IT MATTERS</span>
-        <h3>A changing hobby</h3>
-        <p>
-          These changes provide a starting point for
-          understanding how board-game publishing has evolved.
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi utnnnnnnn"
-
-        </p>
-      </article>
-
-    </aside>
-  </div>
-</section>
+    <!-- CHART 4: MINIMUM AGE -->
+    <section id="minimum-age" class="feature-section">
 
 
-<!-- SECTION 02: WHAT MAKES A MODERN BOARD GAME? -->
-<section id="section-02" class="story-section">
+      <div class="split-chart-card">
+        <aside class="split-chart-info">
+
+          <h3>Is There an Age for Every Game</h3>
+          <p>
+             Board games bring people together, but not every
+            game is designed for every age. Recommended minimum
+            ages offer clues about the audiences publishers
+            aim to reach. Have these recommendations changed
+            as board games have evolved?
+          </p>
+
+          <div class="reading-note">
+            <span class="insight-label">OBSERVATION</span>
+            <p>
+              Recommended minimum ages have remained relatively
+              consistent across generations. The median stays
+              around 10–11 years, with most middle ranges
+              falling between ages 8 and 12. However,
+              games published from 2010–2019 show a slightly
+              wider range, extending to age 13.
+            </p>
+          </div>
+
+        </aside>
+
+        <div class="split-chart-visual age-chart-visual">
+          <div id="chart4" class="vega-chart"></div>
+           <p class="chart-source">
+  Data source:
+  <a href="https://www.kaggle.com/datasets/sujaykapadnis/board-games"
+     target="_blank"
+     rel="noopener noreferrer">
+    Sujay Kapadnis (BoardGameGeek), October 2023
+  </a>
+</p>
+        </div>
+      </div>
+    </section>
+
+
+    
+
+<!-- CHAPTER 03: THE RULES OF THE GAME HAVE CHANGED -->
+<section id="section-03" class="story-section">
 
   <header class="section-hero">
+
     <div class="chapter-label">
       <span class="chapter-line"></span>
-      <span>CHAPTER 02</span>
+      <span>CHAPTER 03</span>
     </div>
 
     <div class="hero-content">
       <div class="hero-text">
-        <h1>What Makes a Modern Board Game?</h1>
-        <p class="hero-description">
-          Beyond the release date, a game's playing time,
-          player count and recommended age shape the
-          experience around the table.
-        </p>
+        <h1>The Rules of the Game Have Changed</h1>
       </div>
 
       <div class="hero-symbol" aria-hidden="true">
-        <span>◷</span>
+        <span>⚙</span>
+        <span>◈</span>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- TWO INTRODUCTION CARDS -->
+  <div class="intro-grid">
+
+    <!-- LEFT: THE INVESTIGATION -->
+    <article class="intro-card journey-card">
+
+      <div class="card-label">THE INVESTIGATION</div>
+
+      <h2>Inside the Game's Design</h2>
+
+      <p>
+        Playing time, group size and age recommendations
+        shape the experience. But what makes each game
+        different? Explore the mechanics behind the rules
+        and how they have evolved across generations.
+      </p>
+
+      <a href="#mechanics" class="text-link">
+        Explore game mechanics
+        <span aria-hidden="true">→</span>
+      </a>
+
+    </article>
+
+    <!-- RIGHT: THE BIG QUESTION -->
+    <article class="intro-card question-card">
+
+      <div class="card-label gold-text">
+        THE BIG QUESTION
+      </div>
+
+      <h2>Are Board Games Becoming More Complex?</h2>
+
+      <p>
+        Do modern games combine more mechanics than
+        older titles? Which mechanics have become more
+        common, and how do they work together?
+      </p>
+
+      <span class="question-note">
+        ✦ Discover how game design has evolved
+      </span>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- CHART 5: GAME MECHANICS -->
+<section id="mechanics" class="chart-card mechanics-section">
+
+  
+<div class="chart-heading">
+  <div class="chart-icon" aria-hidden="true">⚙</div>
+  <div>
+    <h2>Are Board Games Becoming More Complex?</h2>
+    <p>
+      Explore how the number of mechanics per game
+      has changed across publication eras.
+    </p>
+  </div>
+</div>
+
+
+  <!-- TOP: FULL-WIDTH WAFFLE CHART -->
+  <div class="mechanics-chart-frame">
+    <div id="chart5" class="vega-chart"></div>
+     <p class="chart-source">
+  Data source:
+  <a href="https://www.kaggle.com/datasets/sujaykapadnis/board-games"
+     target="_blank"
+     rel="noopener noreferrer">
+    Sujay Kapadnis (BoardGameGeek), October 2023
+  </a>
+</p>
+  </div>
+
+  <!-- BOTTOM: EXPLANATION CARDS -->
+  <div class="mechanics-insights">
+
+    <article class="mechanics-insight">
+      <span class="side-label">OBSERVATION</span>
+      <h3>From Simple Rules to Layered Gameplay</h3>
+      <p>
+        Before 1980, around 80% of games used just
+        1–2 mechanics. By 2010–2019, this share had
+        fallen to roughly 45%, while games with
+        3–4 mechanics became much more common.
+        Games combining five or more mechanics
+        also gained a larger share over time.
+      </p>
+    </article>
+
+    <article class="mechanics-insight mechanics-insight-highlight">
+      <span class="side-label">WHY IT MATTERS</span>
+      <h3>More mechanics, more possibilities</h3>
+      <p>
+        This shift suggests that modern board games
+        increasingly combine different gameplay systems,
+        creating opportunities for richer interactions
+        and strategic choices. But having more mechanics
+        does not necessarily mean a better game.
+        The next question is how these mechanics
+        work together.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- TRANSITION: CHART 5 TO CHART 6 -->
+<div class="chart-transition">
+  <h3>How Do Game Mechanics Work Together?</h3>
+  <p>
+    Beyond the number of mechanics, their combinations
+    shape the gameplay experience.
+  </p>
+</div>
+
+
+<!-- CHART 6: MECHANICS NETWORK -->
+<section id="mechanics" class="chart-card mechanics-section">
+
+  <div class="chart-heading">
+    <div class="chart-icon" aria-hidden="true">◌</div>
+    <div>
+      <h2>How Do Game Mechanics Connect?</h2>
+      <p>
+        Explore which mechanics frequently appear together across
+        the board-game dataset.
+      </p>
+    </div>
+  </div>
+
+  <div class="mechanics-network-layout">
+
+    <!-- LEFT: NETWORK -->
+    <div class="mechanics-network-frame">
+      <div id="chart6" class="vega-chart"></div>
+       <p class="chart-source">
+  Data source:
+  <a href="https://www.kaggle.com/datasets/sujaykapadnis/board-games"
+     target="_blank"
+     rel="noopener noreferrer">
+    Sujay Kapadnis (BoardGameGeek), October 2023
+  </a>
+</p>
+    </div>
+
+    <!-- RIGHT: EXPLANATION -->
+    <aside class="mechanics-insights">
+
+      <article class="mechanics-insight">
+        <span class="side-label">OBSERVATION</span>
+        <h3>Mechanics rarely stand alone</h3>
+        <p>
+          The network shows how often pairs of game mechanics
+          appear together. Larger nodes represent mechanics used
+          across more games, while stronger connections indicate
+          more frequent combinations. Like in dataset, Auction/Bidding appears in 682 games and
+          frequently overlaps with Set Collection (206),
+          Hand Management (134) and Trading (110).
+        </p>
+      </article>
+
+      <article class="mechanics-insight mechanics-insight-highlight">
+        <span class="side-label">WHY IT MATTERS</span>
+        <h3>The Power of Combining Mechanics</h3>
+        <p>
+          A game's experience depends not only on
+          which mechanics it uses, but also on
+          how they interact. Different combinations
+          can create distinct strategic choices and
+          player experiences, even when games share
+          some of the same mechanics.
+        </p>
+      </article>
+
+
+    </aside>
+
+  </div>
+
+</section>
+
+
+<!-- TRANSITION: CHART 6 TO CHART 7 -->
+<div class="chart-transition">
+  <h3>Have the Most Popular Mechanics Changed Over Time?</h3>
+  <p>
+    Beyond how mechanics connect, their changing popularity
+    reveals the evolution of game design.
+  </p>
+</div>
+
+
+<!-- CHART 7: MECHANIC DNA -->
+<section id="mechanics" class="chart-card mechanics-section">
+
+  <div class="chart-heading">
+    <div class="chart-icon" aria-hidden="true">↗</div>
+    <div>
+      <h2>Mechanic DNA: Which Mechanics Have Changed?</h2>
+      <p>
+        Trace the prevalence of board-game mechanics across five
+        publication eras.
+      </p>
+    </div>
+  </div>
+
+  <div class="mechanics-network-frame">
+    <div id="chart7" class="vega-chart"></div>
+     <p class="chart-source">
+  Data source:
+  <a href="https://www.kaggle.com/datasets/sujaykapadnis/board-games"
+     target="_blank"
+     rel="noopener noreferrer">
+    Sujay Kapadnis (BoardGameGeek), October 2023
+  </a>
+</p>
+  </div>
+
+  <div class="mechanics-insights">
+
+    <article class="mechanics-insight">
+      <span class="side-label">OBSERVATION</span>
+      <h3>Old Favourites Fade, New Strategies Emerge</h3>
+      <p>
+        Board-game mechanics have followed different
+        paths over time. Hex-and-Counter declined
+        sharply from around 38% of games before 1980
+        to just 4% in 2010–2019. Meanwhile,
+        Hand Management and Worker Placement became
+        increasingly common, reflecting a shift
+        in the types of gameplay systems used.
+      </p>
+    </article>
+
+    <article class="mechanics-insight mechanics-insight-highlight">
+      <span class="side-label">WHY IT MATTERS</span>
+      <h3>Game Design Never Stands Still</h3>
+      <p>
+        These changing preferences suggest that
+        board-game design continues to evolve.
+        While traditional mechanics remain part
+        of the hobby, newer combinations and
+        strategic systems have gained prominence.
+        Modern games are not simply adding more
+        mechanics; the mechanics they use are
+        changing too.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+<div class="chart-transition">
+  <h3>Do More Mechanics Make a Better Game?</h3>
+  <p>
+    Board games have evolved in the number and variety of
+    mechanics they use. But does adding more mechanics
+    actually lead to higher player ratings?
+  </p>
+</div>
+
+
+<section id="mechanics-ratings" class="feature-section">
+
+  <div class="split-chart-card">
+
+    <!-- LEFT: EXPLANATION -->
+    <aside class="split-chart-info">
+
+
+      <h3>Do More Mechanics Mean Better Ratings?</h3>
+
+      <p>
+        Board games now combine a wider variety of mechanics,
+        but does having more mechanics make a game better?
+        This chart compares player ratings across four groups:
+        <strong>1–2, 3–4, 5–6, and 7+ mechanics</strong>.
+      </p>
+
+      <div class="reading-note">
+
+        <span class="insight-label">OBSERVATION</span>
+
+        <p>
+          Player ratings show a gradual upward trend as games incorporate more mechanics. 
+          Games with just 1–2 mechanics have a median rating of around 6.3, while those combining 7 or more reach approximately 7.2.
+          </p>
+          <p>
+          However, the rating distributions overlap, showing that simpler games can still be highly rated. 
+          This suggests that while games with more mechanics tend to receive better ratings, more mechanics do not automatically guarantee a better game.
+        </p>
+
+      </div>
+
+    </aside>
+
+    <!-- RIGHT: BOX PLOT -->
+    <div class="split-chart-visual age-chart-visual">
+
+      <div id="chart8" class="vega-chart"></div>
+       <p class="chart-source">
+  Data source:
+  <a href="https://www.kaggle.com/datasets/sujaykapadnis/board-games"
+     target="_blank"
+     rel="noopener noreferrer">
+    Sujay Kapadnis (BoardGameGeek), October 2023
+  </a>
+</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+    <!-- RIGHT: VEGA-LITE CHART -->
+    <div class="ratings-chart-area">
+
+      <div
+        id="chart8"
+        class="vega-chart"
+        aria-label="Box plot comparing board-game ratings by mechanic count">
+      </div>
+
+    </div>
+
+
+
+
+<!-- CHAPTER 04: A GLOBAL HOBBY -->
+<section id="global-hobby" class="story-section">
+
+  <header class="section-hero">
+    <div class="chapter-label">
+      <span class="chapter-line"></span>
+      <span>CHAPTER 04</span>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>A Global Hobby</h1>
+
+        
+      </div>
+
+      <div class="hero-symbol" aria-hidden="true">
+        <span>◎</span>
         <span>♟</span>
+        <span>⌖</span>
       </div>
     </div>
   </header>
 
-  <!-- SECTION INTRODUCTION -->
+  <!-- CHAPTER QUESTION -->
   <div class="intro-grid">
 
     <article class="intro-card journey-card">
-      <div class="card-label">THE INVESTIGATION</div>
-      <h2>Inside the Playing Experience</h2>
+      <div class="card-label">THE GLOBAL PICTURE</div>
+      <h2>From Local Tables to Global Markets</h2>
+
       <p>
-        Compare playing-time ranges across publication eras
-        to explore how the expected length of a game varies.
+        Board-game cafés create spaces for players
+        to gather, while crowdfunding helps creators
+        bring new games to life. Together, these
+        datasets offer two perspectives on the
+        hobby's international presence.
       </p>
-      <a href="#playing-time-chart" class="text-link">
-        Explore the data <span aria-hidden="true">→</span>
+
+      <a href="#cafe-world-map" class="text-link">
+        Explore the world map
+        <span aria-hidden="true">→</span>
       </a>
     </article>
 
     <article class="intro-card question-card">
       <div class="card-label gold-text">THE BIG QUESTION</div>
-      <h2>How long is a typical game?</h2>
+      <h2>Where Is the Board-Game Hobby Most Visible?</h2>
+
       <p>
-        Do newer games tend to offer shorter sessions,
-        longer strategic experiences, or a mix of both?
+        Which countries have the most recorded
+        board-game cafés? Where are Kickstarter
+        campaigns launched, and which countries
+        attract the most crowdfunding?
       </p>
+
       <span class="question-note">
-        ✦ Compare the playing-time distribution
+        ✦ Discover the geography of gaming and funding
       </span>
     </article>
 
   </div>
 
-  <!-- CHART 2: PLAYING TIME HEATMAP -->
-  <article id="playing-time-chart" class="chart-card">
+  <!-- CHART 9: GLOBAL CAFÉ MAP -->
+  <section id="cafe-world-map" class="chart-card">
 
     <div class="chart-heading">
-      <div class="chart-icon" aria-hidden="true">◷</div>
+      <div class="chart-icon" aria-hidden="true">◎</div>
+
       <div>
-        <h2>Playing Time Across the Years</h2>
+        <h2>Where Are Board-Game Cafés Found?</h2>
         <p>
-          How the share of games in each playing-time range
-          differs across publication eras.
+          Explore the global distribution of recorded
+          board-game cafés by country.
         </p>
       </div>
     </div>
 
     <div class="chart-insight-layout">
 
-      <!-- LEFT: CHART -->
+      <!-- LEFT: INTERACTIVE MAP -->
       <div class="chart-frame">
-        <div id="chart2" class="vega-chart"></div>
+        <div id="chart9" class="vega-chart"></div>
+        
+        
+<p class="chart-source">
+  Data source:
+  <a href="https://www.meeplemountain.com/articles/the-ultimate-guide-to-board-game-cafes/"
+     target="_blank"
+     rel="noopener noreferrer">
+    Andy Matthews (Meeple Mountain), 2019
+  </a>
+</p>
+
+
+
       </div>
 
-      <!-- RIGHT: OBSERVATION AND INSIGHT -->
+      <!-- RIGHT: OBSERVATION AND INTERPRETATION -->
       <aside class="insight-sidebar">
 
         <article class="side-insight">
           <span class="side-label">OBSERVATION</span>
-          <h3>Different eras, different playtimes</h3>
-          <p>
-            Compare the colours across rows to identify
-            which playing-time ranges account for a larger
-            share of games within each era.
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magn"
+          <h3>A Global Hobby, Unevenly Distributed</h3>
 
+          <p>
+            Board-game cafés appear across multiple
+            continents, but recorded counts vary greatly.
+            The United States leads with 249 cafés,
+            followed by Canada (118) and the United
+            Kingdom (109). Europe also shows a broad
+            spread of cafés, with France recording 57.
           </p>
         </article>
 
         <article class="side-insight highlight-insight">
           <span class="side-label">WHY IT MATTERS</span>
-          <h3>The experience matters</h3>
+          <h3>More Than Just a Place to Play</h3>
+
           <p>
-            Playing time influences whether a game suits
-            a quick session or a longer gathering.
-            The distribution helps reveal the range of
-            experiences available to players.
+              Board-game cafés provide spaces where people
+              can discover games and connect with other
+              players. Their presence across continents
+              illustrates the international reach of
+              tabletop gaming, while the uneven distribution
+              raises questions about access to these spaces
+              and differences in data coverage.
+
           </p>
         </article>
 
       </aside>
+
     </div>
 
-    <!--
-    <div class="chart-caption">
-      <span class="caption-mark">i</span>
-      <p>
-        <strong>How to read:</strong>
-        Each row represents a publication era, and each
-        column represents a playing-time range. Darker
-        colours indicate a larger share of games within
-        that era, not a larger number of games across all eras.
-      </p>
-    </div>
-    -->
+  </section>
 
-  </article>
+</section>
 
-  <!-- TRANSITION TO THE NEXT CHART -->
-<div class="closing-note">
+
+<!-- TRANSITION: CHART 9 TO CHART 10 -->
+<div class="chart-transition">
+  <h3>Where Does the Money Behind Board Games Come From?</h3>
   <p>
-    <strong>Next, who plays?</strong>
-    Playing time is only one part of the experience.
-    The next chart explores how many players board games
-    are designed to accommodate.
+    Beyond gaming cafés, crowdfunding reveals where
+    new board-game projects attract financial support.
   </p>
 </div>
 
+
+<!-- CHART 10: KICKSTARTER FUNDING MAP -->
+<section id="kickstarter-funding" class="chart-card">
+
+  <div class="chart-heading">
+    <div class="chart-icon" aria-hidden="true">$</div>
+
+    <div>
+      <h2>Where Is the Money Going?</h2>
+      <p>
+        Explore the total Kickstarter funding raised by
+        board-game projects across countries.
+      </p>
+    </div>
+  </div>
+
+  <div class="chart-insight-layout">
+
+    <!-- LEFT: INTERACTIVE MAP -->
+    <div class="chart-frame">
+      <div id="chart10" class="vega-chart"></div>
+      <p class="chart-source">
+  Data source:
+  <a href="https://www.kaggle.com/datasets/kemical/kickstarter-projects"
+     target="_blank"
+     rel="noopener noreferrer">
+    Mickaël Mouillé (Kaggle — Kickstarter Projects), 2016
+  </a>
+</p>
+    </div>
+
+    <!-- RIGHT: OBSERVATION AND INTERPRETATION -->
+    <aside class="insight-sidebar">
+
+      <article class="side-insight">
+        <span class="side-label">OBSERVATION</span>
+
+        <h3>One Country Dominates Crowdfunding</h3>
+
+        <p>
+          Kickstarter funding for board games is
+          heavily concentrated in the United States,
+          with approximately $254.3 million recorded.
+          This far exceeds the United Kingdom's
+          $25.6 million and Canada's $4.7 million.
+          Although funding spans several countries,
+          the gap between leading markets is substantial.
+        </p>
+      </article>
+
+      <article class="side-insight highlight-insight">
+        <span class="side-label">WHY IT MATTERS</span>
+
+        <h3>A Global Market, Unequal Funding</h3>
+
+        <p>
+          Crowdfunding gives board-game creators
+          opportunities to reach supporters worldwide.
+          However, the concentration of funding
+          suggests that projects based in certain
+          countries attract much larger financial
+          totals. This raises another question:
+          do these countries also launch more campaigns,
+          or do their projects simply raise more money?
+        </p>
+      </article>
+
+    </aside>
+
+  </div>
 
 </section>
 
 
 
-<!-- CHART 3: PLAYER COUNT -->
-<section id="player-count" class="feature-section">
-  <!--
-<div class="feature-heading">
-  <span class="section-kicker">03 / PLAYER COUNT</span>
-  <h2>How Many Players Make the Game?</h2>
+<!-- TRANSITION: CHART 10 TO CHART 11 -->
+<div class="chart-transition">
+  <h3>Does More Funding Mean More Campaigns?</h3>
   <p>
-    From solo sessions to group play, explore how supported
-    player counts vary across publication eras.
+    Beyond funding totals, campaign counts reveal
+    where board-game crowdfunding is most active.
   </p>
 </div>
--->
+
+
+
+<!-- CHART 11: KICKSTARTER CAMPAIGNS -->
+<section id="kickstarter-campaigns" class="feature-section">
+
 
   <div class="split-chart-card">
-    <aside class="split-chart-info">
-      <span class="chart-number">03</span>
-      <span class="insight-label">THE SOCIAL EXPERIENCE</span>
 
-      <h3>Who is the game designed for?</h3>
+    <!-- LEFT: OBSERVATION AND EXPLANATION -->
+    <aside class="split-chart-info">
+
+
+      <h3>A Global Platform, Dominated by a Few Countries</h3>
+
       <p>
-        Board games can be designed for solo players, pairs,
-        or larger groups. This chart compares how each supported
-        player count ranks across publication eras.
+        The United States leads with
+        <strong>8,499 campaigns</strong>, followed by
+        the United Kingdom with <strong>1,083</strong>.
+        Canada and Australia follow with 408 and
+        172 campaigns respectively.
       </p>
 
       <div class="reading-note">
-        <strong>How to read it</strong>
+        <strong>WHY IT MATTERS</strong>
+        <h3>More Campaigns Do Not Always Mean More Success</h3>
         <p>
-          Rank 1 means the highest share of games supports that
-          player count. Follow each coloured line to see how its
-          relative ranking changes over time.
+          Comparing this map with the previous funding map reveals two sides of crowdfunding: 
+          how many projects are launched and how much money they raise. The United States leads both measures, 
+          suggesting a particularly large presence in this Kickstarter dataset. 
+          However, a high campaign count does not necessarily mean each project raises more money. 
+          Understanding crowdfunding success requires looking beyond the number of campaigns to funding per project and other outcomes.
         </p>
       </div>
 
-      <p class="chart-footnote">
-        A change in rank does not necessarily mean the number
-        of games increased or decreased.
-      </p>
     </aside>
 
+    <!-- RIGHT: GRADUATED SYMBOL MAP -->
     <div class="split-chart-visual">
-      <div id="chart3" class="vega-chart"></div>
+      <div id="chart11" class="vega-chart"></div>
+      <p class="chart-source">
+  Data source:
+  <a href="https://www.kaggle.com/datasets/kemical/kickstarter-projects"
+     target="_blank"
+     rel="noopener noreferrer">
+    Mickaël Mouillé (Kaggle — Kickstarter Projects), 2016
+  </a>
+</p>
     </div>
+
   </div>
+
 </section>
 
 
-<!-- CHART 4: MINIMUM AGE -->
-<section id="minimum-age" class="feature-section">
-  <div class="feature-heading">
-    <span class="section-kicker">WHO CAN PLAY?</span>
-    <h2>How Old Are Board Games Designed For?</h2>
-    <p>Explore recommended minimum ages across publication eras.</p>
+
+<!-- ======================================= -->
+<!-- FINAL CHAPTER: CONCLUSION               -->
+<!-- ======================================= -->
+
+<section id="conclusion" class="conclusion-section">
+
+  <div class="chapter-label">
+    <span class="chapter-line"></span>
+    <span>THE FINAL CHAPTER</span>
   </div>
 
-  <div class="split-chart-card">
-    <aside class="split-chart-info">
-      <span class="chart-number">04</span>
-      <span class="insight-label">THE INTENDED AUDIENCE</span>
+  <!-- CLOSING INTRODUCTION -->
+  <div class="hero-content">
+        <div class="hero-text">
+          <h1>The Game Is Still Evolving.</h1>
+        </div>
 
-      <h3>What ages do games target?</h3>
-      <p>
-        Recommended minimum ages offer a way to compare the
-        intended audiences of board games and how those
-        recommendations vary across eras.
-      </p>
-
-      <div class="reading-note">
-        <strong>How to read it</strong>
-        <p>
-          The centre line marks the median age. The box shows
-          the middle 50% of recommendations, while points beyond
-          the whiskers indicate statistical outliers.
-        </p>
+        <div class="hero-symbol" aria-hidden="true">
+          <span>♟</span>
+          <span>⚄</span>
+          <span>▱</span>
+        </div>
       </div>
 
-      <p class="chart-footnote">
-        Recommended minimum age is not a direct measure of
-        actual game difficulty.
-      </p>
-    </aside>
 
-    <div class="split-chart-visual age-chart-visual">
-      <div id="chart4" class="vega-chart"></div>
-    </div>
+  <!-- THREE KEY FINDINGS -->
+  <div class="conclusion-grid">
+
+    <!-- FINDING 1 -->
+    <article class="conclusion-card">
+
+      <span class="conclusion-number">01 / GROWTH</span>
+
+      <h3>More Than Just a Publishing Boom</h3>
+
+      <p>
+        Recorded board-game releases grew dramatically,
+        reaching <strong>733 games in 2015</strong> in this
+        dataset. But the expansion was not simply about
+        producing more titles. Games also diversified in
+        playing time, supported player counts, and
+        the experiences they offer.
+      </p>
+
+    </article>
+
+
+    <!-- FINDING 2 -->
+    <article class="conclusion-card">
+
+      <span class="conclusion-number">02 / DESIGN</span>
+
+      <h3>More Mechanics, New Possibilities</h3>
+
+      <p>
+        Board-game design has shifted towards combining
+        more gameplay mechanics. While around
+        <strong>80% of games before 1980</strong> used
+        only 1–2 mechanics, this fell to approximately
+        <strong>45% in 2010–2019</strong>.
+        Games with more mechanics also tend to receive
+        higher player ratings, although complexity
+        alone does not guarantee quality.
+      </p>
+
+    </article>
+
+
+    <!-- FINDING 3 -->
+    <article class="conclusion-card">
+
+      <span class="conclusion-number">03 / GLOBAL REACH</span>
+
+      <h3>From Local Tables to Global Communities</h3>
+
+      <p>
+        Board-game cafés and crowdfunding campaigns
+        reveal an international hobby. Yet this growth
+        is uneven: the United States accounts for
+        <strong>8,499 Kickstarter campaigns</strong>
+        and approximately
+        <strong>US$254.3 million in funding</strong>
+        in the analysed data, highlighting the
+        concentration of crowdfunding activity.
+      </p>
+
+    </article>
+
   </div>
+
+
+  <!-- FINAL TAKEAWAY -->
+
+<div class="conclusion-takeaway">
+
+  <span class="conclusion-takeaway-label">
+    THE FINAL TAKEAWAY
+  </span>
+
+  <h3>
+    Board games have evolved beyond the rules,
+    bringing new experiences and connecting players worldwide.
+  </h3>
+
+  <p>
+    From simpler classics to modern strategic games,
+    the hobby continues to grow, innovate, and bring people together.
+  </p>
+
+  <div class="conclusion-signoff">
+    <span class="signoff-line"></span>
+    <span>THE STORY CONTINUES</span>
+    <span class="signoff-line"></span>
+  </div>
+
+</div>
+
 </section>
 
 
 
 
-    
+<section id="metadata" class="metadata-section">
+
+  <span class="metadata-label">ABOUT THE DATA</span>
+  <h2>Data Sources & Methodology</h2>
+
+  <p>
+    This visualisation combines three datasets:
+  </p>
+
+  <ul>
+    <li>
+      <strong>BoardGameGeek:</strong>
+      Board-game releases, mechanics, playing times,
+      player counts, ages and ratings.
+    </li>
+
+    <li>
+      <strong>Kickstarter Projects:</strong>
+      <a href="https://www.kaggle.com/datasets/kemical/kickstarter-projects"
+         target="_blank">
+        Mickaël Mouillé (2016)
+      </a>.
+      Filtered to Tabletop Games and aggregated by country.
+    </li>
+
+    <li>
+      <strong>Worldwide Board-Game Cafés:</strong>
+      <a href="https://www.meeplemountain.com/articles/the-ultimate-guide-to-board-game-cafes/"
+         target="_blank">
+        Andy Matthews (Meeple Mountain, 2019)
+      </a>.
+      Café locations aggregated by country.
+    </li>
+  </ul>
+
+  <p class="metadata-note">
+    <strong>Note:</strong>
+    Results reflect dataset coverage and may not represent
+    all board games, crowdfunding projects or cafés worldwide.
+  </p>
+
+</section>
+
+
+
+
 
     <footer class="section-footer">
-      <p>
-        Data: BoardGameGeek-derived dataset.
-        Counts reflect the coverage and limitations of the dataset.
-      </p>
+    
       <a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
         Back to top ↑
       </a>
@@ -366,4 +1194,5 @@
 
   </main>
 </body>
+
 </html>
